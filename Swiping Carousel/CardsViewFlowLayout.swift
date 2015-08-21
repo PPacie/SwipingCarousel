@@ -8,18 +8,19 @@
 
 import UIKit
 
-private struct CardsViewFlowConstants {
-    static let activeDistance: CGFloat = 200
-    static let zoomFactor: CGFloat = 0.3
-    static let itemWidth: CGFloat = 200
-    static let itemHeight: CGFloat = 315
-    static let minLineSpacing: CGFloat = 50.0
-    
-}
 
 class CardsViewFlowLayout:  UICollectionViewFlowLayout {
     
-
+    // Mark: Constants 
+    private struct CardsViewFlowConstants {
+        static let activeDistance: CGFloat = 200
+        static let zoomFactor: CGFloat = 0.3
+        static let itemWidth: CGFloat = 200
+        static let itemHeight: CGFloat = 315
+        static let minLineSpacing: CGFloat = 50.0
+        
+    }
+    
     override func prepareLayout() {
         super.prepareLayout()
         
@@ -28,6 +29,8 @@ class CardsViewFlowLayout:  UICollectionViewFlowLayout {
         self.minimumLineSpacing = CardsViewFlowConstants.minLineSpacing;
     }
     
+    
+    // Here is where the magic happens
     override func layoutAttributesForElementsInRect(rect: CGRect) -> [AnyObject]? {
         
         var array = super.layoutAttributesForElementsInRect(rect)
@@ -54,7 +57,6 @@ class CardsViewFlowLayout:  UICollectionViewFlowLayout {
     
     override func targetContentOffsetForProposedContentOffset(proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
                
-        
         var offsetAdjustment:CGFloat = CGFloat(MAXFLOAT)
         let horizontalCenter = proposedContentOffset.x + (CGRectGetWidth(collectionView!.bounds) / 2.0)
         
