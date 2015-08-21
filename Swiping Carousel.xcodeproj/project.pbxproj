@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6702087B1B868F5400F1E4EF /* CardsViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6702087A1B868F5400F1E4EF /* CardsViewFlowLayout.swift */; };
 		6742B92E1B8613230030424E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6742B92D1B8613230030424E /* AppDelegate.swift */; };
 		6742B9331B8613230030424E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6742B9311B8613230030424E /* Main.storyboard */; };
 		6742B9351B8613230030424E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6742B9341B8613230030424E /* Images.xcassets */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6702087A1B868F5400F1E4EF /* CardsViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsViewFlowLayout.swift; sourceTree = "<group>"; };
 		6742B9281B8613230030424E /* Swiping Carousel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swiping Carousel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6742B92C1B8613230030424E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6742B92D1B8613230030424E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		670208791B868F0300F1E4EF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6742B94F1B861A930030424E /* CardCollectionViewCell.swift */,
+				6702087A1B868F5400F1E4EF /* CardsViewFlowLayout.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		6702087C1B868FD600F1E4EF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6742B94D1B8613E50030424E /* SwipingCarouselCollectionViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		6742B91F1B8613230030424E = {
 			isa = PBXGroup;
 			children = (
@@ -79,12 +98,8 @@
 		6742B92A1B8613230030424E /* Swiping Carousel */ = {
 			isa = PBXGroup;
 			children = (
-				6742B92D1B8613230030424E /* AppDelegate.swift */,
-				6742B94D1B8613E50030424E /* SwipingCarouselCollectionViewController.swift */,
-				6742B94F1B861A930030424E /* CardCollectionViewCell.swift */,
-				6742B9311B8613230030424E /* Main.storyboard */,
-				6742B9341B8613230030424E /* Images.xcassets */,
-				6742B9361B8613230030424E /* LaunchScreen.xib */,
+				670208791B868F0300F1E4EF /* Views */,
+				6702087C1B868FD600F1E4EF /* Controllers */,
 				6742B92B1B8613230030424E /* Supporting Files */,
 			);
 			path = "Swiping Carousel";
@@ -93,6 +108,10 @@
 		6742B92B1B8613230030424E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6742B92D1B8613230030424E /* AppDelegate.swift */,
+				6742B9311B8613230030424E /* Main.storyboard */,
+				6742B9341B8613230030424E /* Images.xcassets */,
+				6742B9361B8613230030424E /* LaunchScreen.xib */,
 				6742B92C1B8613230030424E /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -217,6 +236,7 @@
 			files = (
 				6742B94E1B8613E50030424E /* SwipingCarouselCollectionViewController.swift in Sources */,
 				6742B9501B861A930030424E /* CardCollectionViewCell.swift in Sources */,
+				6702087B1B868F5400F1E4EF /* CardsViewFlowLayout.swift in Sources */,
 				6742B92E1B8613230030424E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +433,7 @@
 				6742B9491B8613230030424E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6742B94A1B8613230030424E /* Build configuration list for PBXNativeTarget "Swiping CarouselTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +442,7 @@
 				6742B94C1B8613230030424E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
