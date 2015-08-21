@@ -2,35 +2,24 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CkF-vA-ZoU">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Swiping Carousel-->
         <scene sceneID="6ra-H0-6Oz">
             <objects>
-                <collectionViewController id="802-gR-r46" customClass="SwipingCarouselCollectionViewController" customModule="Swiping_Carousel" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController extendedLayoutIncludesOpaqueBars="YES" id="802-gR-r46" customClass="SwipingCarouselCollectionViewController" customModule="Swiping_Carousel" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="exg-zA-eSt">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewLayout key="collectionViewLayout" id="kb6-Gk-bCy" customClass="CardsViewFlowLayout" customModule="Swiping_Carousel" customModuleProvider="target"/>
-                        <view key="backgroundView" contentMode="scaleToFill" id="r6L-yB-oMx">
+                        <containerView key="backgroundView" opaque="NO" contentMode="scaleToFill" id="EOx-C9-Kxz">
                             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6d-gC-UEZ">
-                                    <rect key="frame" x="279" y="571" width="42" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="√" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ahc-Px-MWi">
-                                    <rect key="frame" x="279" y="104" width="42" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" red="0.069874640560000006" green="0.57855276109999998" blue="0.01406218809" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                        </view>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <connections>
+                                <segue destination="CFe-66-wW2" kind="embed" id="T9a-v5-8Qu"/>
+                            </connections>
+                        </containerView>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Card" id="Alz-sX-f71" customClass="CardCollectionViewCell" customModule="Swiping_Carousel" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -97,7 +86,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CkF-vA-ZoU" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NWo-8X-N2l">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="NWo-8X-N2l">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -109,6 +98,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5bt-4t-rZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="599" y="341"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="v20-pV-2sF">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="CFe-66-wW2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8gi-1G-PeE"/>
+                        <viewControllerLayoutGuide type="bottom" id="ki6-53-KFs"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="6M0-BY-34V">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQP-BR-c5z">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✔️" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8J-qY-ZQM">
+                                        <rect key="frame" x="289" y="20" width="22" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="❌" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfH-dX-XwG">
+                                        <rect key="frame" x="289" y="571" width="22" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="sfH-dX-XwG" secondAttribute="centerX" id="1PO-8H-vlf"/>
+                                    <constraint firstAttribute="centerX" secondItem="w8J-qY-ZQM" secondAttribute="centerX" id="MUu-2F-2VZ"/>
+                                    <constraint firstItem="sfH-dX-XwG" firstAttribute="bottom" secondItem="gQP-BR-c5z" secondAttribute="bottomMargin" id="a4O-DE-te1"/>
+                                    <constraint firstItem="w8J-qY-ZQM" firstAttribute="top" secondItem="gQP-BR-c5z" secondAttribute="top" constant="20" symbolic="YES" id="sE1-Xj-DdY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gQP-BR-c5z" firstAttribute="bottom" secondItem="ki6-53-KFs" secondAttribute="top" id="3N1-jr-ejG"/>
+                            <constraint firstAttribute="trailing" secondItem="gQP-BR-c5z" secondAttribute="trailing" id="49a-NR-Vbi"/>
+                            <constraint firstItem="gQP-BR-c5z" firstAttribute="leading" secondItem="6M0-BY-34V" secondAttribute="leading" id="Qjy-4Z-JHB"/>
+                            <constraint firstItem="gQP-BR-c5z" firstAttribute="top" secondItem="8gi-1G-PeE" secondAttribute="bottom" id="vvj-nV-8hh"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HG7-9I-r77" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2133" y="341"/>
         </scene>
     </scenes>
 </document>

@@ -68,7 +68,6 @@ class CardsViewFlowLayout:  UICollectionViewFlowLayout {
                 offsetAdjustment = itemHorizontalCenter - horizontalCenter
             }
         }
-        
     
         return CGPointMake(proposedContentOffset.x + offsetAdjustment, proposedContentOffset.y)
     }

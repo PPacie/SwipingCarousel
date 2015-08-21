@@ -23,6 +23,7 @@ class SwipingCarouselCollectionViewController: UICollectionViewController {
         let activity: String
     }
    
+    //Load some demo information into the [savedCards] Array.
     private func loadCards() {
         for index in 1...10 {
             let newCard = Card(image: UIImage(named:"image\(index).png"), name: "User\(index)", profession: "Profesion\(index)", mainDescription: "To share my idea with somebody! I want to start my own fashion company. It's going to be called Black Milk! Ping me if you want to chat 😜", activity: "Activity\(index)")
