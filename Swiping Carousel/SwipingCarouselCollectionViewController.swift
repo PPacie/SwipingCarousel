@@ -48,7 +48,7 @@ class SwipingCarouselCollectionViewController: UICollectionViewController {
         cell.activityLabel.text = currentCard.activity
         cell.backgroundColor = colors[indexPath.item]
         cell.layer.cornerRadius = 10;
-      //  cell.addGestureRecognizer(UIPanGestureRecognizer(target: cell, action: "handlePanGestureCell:"))
+        cell.addGestureRecognizer(UIPanGestureRecognizer(target: cell, action: "handlePanGestureCell:"))
 //        cell.layer.shadowRadius = 4;
 //        cell.layer.shadowOpacity = 0.6;
 //        cell.layer.shadowOffset = CGSizeMake(3, 3);
