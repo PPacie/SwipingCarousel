@@ -12,7 +12,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="exg-zA-eSt">
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewLayout key="collectionViewLayout" id="kb6-Gk-bCy" customClass="CardsViewFlowLayout" customModule="Swiping_Carousel" customModuleProvider="target"/>
+                        <collectionViewLayout key="collectionViewLayout" id="MYq-di-7ba" customClass="CardsViewFlowLayout" customModule="Swiping_Carousel" customModuleProvider="target"/>
                         <containerView key="backgroundView" opaque="NO" contentMode="scaleToFill" id="EOx-C9-Kxz">
                             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -60,6 +60,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" red="0.792156862745098" green="0.52156862745098043" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                                 <size key="customSize" width="200" height="315"/>
                                 <connections>
                                     <outlet property="activityLabel" destination="Uux-Pi-5XW" id="SfL-ay-e8O"/>
