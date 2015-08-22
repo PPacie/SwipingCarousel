@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class CardCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
@@ -36,6 +37,10 @@ class CardCollectionViewCell: UICollectionViewCell {
     
     // MARK: Gestures Handling
     
+    private struct Constants {
+        static let ActionMargin: CGFloat  = 200
+    }
+    
     var xFromCenter = CGFloat()
     var yFromCenter = CGFloat()
     var originalPoint = CGPoint()
@@ -61,10 +66,10 @@ class CardCollectionViewCell: UICollectionViewCell {
     }
     
     func afterSwipeAction() {
-        if yFromCenter > ACTION_MARGIN {
+        if yFromCenter > Constants.ActionMargin {
             println("Down")
             downAction()
-        } else if yFromCenter < -ACTION_MARGIN {
+        } else if yFromCenter < -Constants.ActionMargin {
             println("UP")
             upAction()
         } else {
@@ -79,9 +84,13 @@ class CardCollectionViewCell: UICollectionViewCell {
     
     func upAction() {
         let finishPoint: CGPoint = CGPointMake(originalPoint.x, -frame.maxY)
-        UIView.animateWithDuration(0.15, animations: {
+        UIView.animateWithDuration(0.15, animations: { () -> Void in
             self.center = finishPoint
-        })
+        }) { (completion) -> Void in
+            self.removeFromSuperview()
+            self.setNeedsDisplay()
+        }
+        
         //        allTheCards.removeAtIndex(cellIndexPathToDelete.row)
         //        collectionView?.setNeedsDisplay()
         NSLog("YES")
