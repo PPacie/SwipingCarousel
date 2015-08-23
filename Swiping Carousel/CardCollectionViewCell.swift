@@ -32,19 +32,20 @@ class CardCollectionViewCell: UICollectionViewCell {
     // MARK: Gestures Handling
     
     private struct Constants {
-        static let SwipeDistanceToTakeAction: CGFloat  = 200
+        static let SwipeDistanceToTakeAction: CGFloat  = 150
     }
     
-    var swipeDistanceOnY = CGFloat() //Distance of the swipe over "y" axis
+    var swipeDistanceOnY = CGFloat() //Distance of the swipe over "y" axis.
+    
     var originalPoint = CGPoint()
     
     func handlePanGesture(sender: UIPanGestureRecognizer) {
         
-        swipeDistanceOnY = sender.translationInView(self).y
+        swipeDistanceOnY = sender.translationInView(self).y //Get the distance of the Swipe on "y" axis.
         
         switch sender.state {
         case .Began:
-            originalPoint = self.center
+            originalPoint = self.center //Get the center of the Cell.
         case .Changed:
             println("Gesture Changed")
             self.center = CGPointMake(originalPoint.x, originalPoint.y + swipeDistanceOnY)

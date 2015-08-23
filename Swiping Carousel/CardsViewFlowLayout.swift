@@ -29,8 +29,8 @@ class CardsViewFlowLayout:  UICollectionViewFlowLayout {
         self.minimumLineSpacing = CardsViewFlowConstants.minLineSpacing
         //These numbers will depend on the size of your cards you have set in the CardsViewFlowConstants.
         //80 - will let the first and last card of the CollectionView to be centered.
-        //30 - will avoid the double rows in the CollectionView
-        self.sectionInset = UIEdgeInsetsMake(30.0, 80.0, 30, 80.0)  
+        //50 - will avoid the double rows in the CollectionView
+        self.sectionInset = UIEdgeInsetsMake(50.0, 80.0, 50, 80.0)
         
     }
     
