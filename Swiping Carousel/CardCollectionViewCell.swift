@@ -29,9 +29,13 @@ class CardCollectionViewCell: UICollectionViewCell {
         
         // Add Gesture to Cell
         self.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: "handlePanGesture:"))
-        // Cell Corner
-        self.layer.cornerRadius = 10       
-
+        // Cell Corner and Shadows
+        self.layer.cornerRadius = 10
+        self.layer.shadowRadius = 5
+        self.layer.shadowOpacity = 0.6
+        // Emphasize the shadow on the bottom and right sides of the cell
+        self.layer.shadowOffset = CGSizeMake(4, 4)
+        
     }
     
     // MARK: Gestures Handling

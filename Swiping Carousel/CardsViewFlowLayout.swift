@@ -29,7 +29,7 @@ class CardsViewFlowLayout:  UICollectionViewFlowLayout {
         self.minimumLineSpacing = CardsViewFlowConstants.minLineSpacing
         //These numbers will depend on the size of your cards you have set in the CardsViewFlowConstants.
         //60 - will let the first and last card of the CollectionView to be centered.
-        //80 - will avoid the double rows in the CollectionView
+        //100 - will avoid the double rows in the CollectionView
         self.sectionInset = UIEdgeInsetsMake(100.0, 60.0, 100, 60.0)
         
     }
@@ -61,7 +61,7 @@ class CardsViewFlowLayout:  UICollectionViewFlowLayout {
         return array
     }
     
-    //Focus the zoom in the middle.
+    //Focus the zoom in the middle Card.
     override func targetContentOffsetForProposedContentOffset(proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
                
         var offsetAdjustment:CGFloat = CGFloat(MAXFLOAT)

@@ -21,7 +21,7 @@
                             </connections>
                         </containerView>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Card" id="Alz-sX-f71" customClass="CardCollectionViewCell" customModule="Swiping_Carousel" customModuleProvider="target">
+                            <collectionViewCell multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Card" id="Alz-sX-f71" customClass="CardCollectionViewCell" customModule="Swiping_Carousel" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
