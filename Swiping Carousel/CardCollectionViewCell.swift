@@ -90,11 +90,13 @@ class CardCollectionViewCell: UICollectionViewCell {
         let maxTopPoint: CGPoint = CGPointMake(originalPoint.x, -frame.maxY)
         UIView.animateWithDuration(0.50, animations: { () -> Void in
             self.center = maxTopPoint //Move the card up off the screen.
+            self.superview?.userInteractionEnabled = false //Deactivate the user interaction in the Superview (In this case will be in the collection view). To avoid scrolling during the animation.
         }) { (completion) -> Void in
+            self.superview?.userInteractionEnabled = true // Re-activate the user interaction.
             self.removeFromSuperview()
             self.delegate?.cardSwipedUp(self) //Delegate the SwipeUp action and send the view with it.
+            
         }
-        
         
     }
     
@@ -102,7 +104,9 @@ class CardCollectionViewCell: UICollectionViewCell {
         let maxDownPoint: CGPoint = CGPointMake(originalPoint.x, 2 * frame.maxY)
         UIView.animateWithDuration(0.50, animations: { () -> Void in
             self.center = maxDownPoint //Move the card down off the screen.
+            self.superview?.userInteractionEnabled = false //Deactivate the user interaction in the Superview (In this case will be in the collection view). To avoid scrolling during the animation.
             }) { (completion) -> Void in
+            self.superview?.userInteractionEnabled = true // Re-activate the user interaction.
             self.removeFromSuperview()
             self.delegate?.cardSwipedDown(self) //Delegate the SwipeDown action and send the view with it.
         }
