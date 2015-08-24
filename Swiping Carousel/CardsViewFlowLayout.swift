@@ -16,7 +16,7 @@ class CardsViewFlowLayout:  UICollectionViewFlowLayout {
         static let activeDistance: CGFloat = 200
         static let zoomFactor: CGFloat = 0.3
         static let itemWidth: CGFloat = 200
-        static let itemHeight: CGFloat = 315
+        static let itemHeight: CGFloat = 267
         static let minLineSpacing: CGFloat = 50.0
         
     }
@@ -29,8 +29,8 @@ class CardsViewFlowLayout:  UICollectionViewFlowLayout {
         self.minimumLineSpacing = CardsViewFlowConstants.minLineSpacing
         //These numbers will depend on the size of your cards you have set in the CardsViewFlowConstants.
         //60 - will let the first and last card of the CollectionView to be centered.
-        //50 - will avoid the double rows in the CollectionView
-        self.sectionInset = UIEdgeInsetsMake(50.0, 60.0, 50, 60.0)
+        //80 - will avoid the double rows in the CollectionView
+        self.sectionInset = UIEdgeInsetsMake(100.0, 60.0, 100, 60.0)
         
     }
     
