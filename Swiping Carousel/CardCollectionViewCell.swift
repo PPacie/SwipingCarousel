@@ -47,7 +47,7 @@ class CardCollectionViewCell: UICollectionViewCell {
     var swipeDistanceOnY = CGFloat() //Distance of the swipe over "y" axis.
     var originalPoint = CGPoint()
     
-    func handlePanGesture(sender: UIPanGestureRecognizer) {
+    func handlePanGesture(sender: UIPanGestureRecognizer) {        
         
         swipeDistanceOnY = sender.translationInView(self).y //Get the distance of the Swipe on "y" axis.
         
@@ -66,16 +66,24 @@ class CardCollectionViewCell: UICollectionViewCell {
     }
     
     func afterSwipeAction() {
-        //Check wheather or not the distance of the gesture is enough to move the card off the screen (up or down).
-        if swipeDistanceOnY > Constants.SwipeDistanceToTakeAction {
-            downAction()
-        } else if swipeDistanceOnY < -Constants.SwipeDistanceToTakeAction {
-            upAction()
+        //First, we check if the swiped card is the one in the middle of screen by cheking its size. If the card is one of the sides, we send it back to its original position.
+        if (self.frame.size.height > self.bounds.size.height) {
+            //If the card is the one at the center (biggest one), we proceed to check wheather or not the distance of the gesture is enough to move the card off the screen (up or down).
+            if swipeDistanceOnY > Constants.SwipeDistanceToTakeAction {
+                downAction()
+            } else if swipeDistanceOnY < -Constants.SwipeDistanceToTakeAction {
+                upAction()
+            } else {
+                UIView.animateWithDuration(0.20, animations: {
+                    self.center = self.originalPoint
+                })
+            }
         } else {
             UIView.animateWithDuration(0.20, animations: {
-               self.center = self.originalPoint
+                self.center = self.originalPoint
             })
         }
+        
     }
     
     func upAction() {
