@@ -42,6 +42,8 @@ class CardCollectionViewCell: UICollectionViewCell {
     
     private struct Constants {
         static let SwipeDistanceToTakeAction: CGFloat  = 140 //Distance required for the card to go off the screen.
+        static let SwipeImageAnimationDuration: NSTimeInterval = 0.30 //Duration of the Animation when Swiping Up/Down.
+        static let CenterImageAnimationDuration: NSTimeInterval = 0.20 //Duration of the Animation when image gets back to original postion.
     }
     
     var swipeDistanceOnY = CGFloat() //Distance of the swipe over "y" axis.
@@ -74,12 +76,13 @@ class CardCollectionViewCell: UICollectionViewCell {
             } else if swipeDistanceOnY < -Constants.SwipeDistanceToTakeAction {
                 upAction()
             } else {
-                UIView.animateWithDuration(0.20, animations: {
+                UIView.animateWithDuration(Constants.CenterImageAnimationDuration, animations: {
                     self.center = self.originalPoint
                 })
+    
             }
         } else {
-            UIView.animateWithDuration(0.20, animations: {
+            UIView.animateWithDuration(Constants.CenterImageAnimationDuration, animations: {
                 self.center = self.originalPoint
             })
         }
@@ -88,7 +91,7 @@ class CardCollectionViewCell: UICollectionViewCell {
     
     func upAction() {
         let maxTopPoint: CGPoint = CGPointMake(originalPoint.x, -frame.maxY)
-        UIView.animateWithDuration(0.50, animations: { () -> Void in
+        UIView.animateWithDuration(Constants.SwipeImageAnimationDuration, animations: { () -> Void in
             self.center = maxTopPoint //Move the card up off the screen.
             self.superview?.userInteractionEnabled = false //Deactivate the user interaction in the Superview (In this case will be in the collection view). To avoid scrolling during the animation.
         }) { (completion) -> Void in
@@ -102,7 +105,7 @@ class CardCollectionViewCell: UICollectionViewCell {
     
     func downAction() {
         let maxDownPoint: CGPoint = CGPointMake(originalPoint.x, 2 * frame.maxY)
-        UIView.animateWithDuration(0.50, animations: { () -> Void in
+        UIView.animateWithDuration(Constants.SwipeImageAnimationDuration, animations: { () -> Void in
             self.center = maxDownPoint //Move the card down off the screen.
             self.superview?.userInteractionEnabled = false //Deactivate the user interaction in the Superview (In this case will be in the collection view). To avoid scrolling during the animation.
             }) { (completion) -> Void in
