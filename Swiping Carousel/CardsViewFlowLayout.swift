@@ -28,14 +28,15 @@ class CardsViewFlowLayout:  UICollectionViewFlowLayout {
         self.scrollDirection = .Horizontal
         self.minimumLineSpacing = CardsViewFlowConstants.minLineSpacing
         //These numbers will depend on the size of your cards you have set in the CardsViewFlowConstants.
-        //80 - will let the first and last card of the CollectionView to be centered.
+        //60 - will let the first and last card of the CollectionView to be centered.
         //50 - will avoid the double rows in the CollectionView
-        self.sectionInset = UIEdgeInsetsMake(50.0, 80.0, 50, 80.0)
+        self.sectionInset = UIEdgeInsetsMake(50.0, 60.0, 50, 60.0)
         
     }
     
     
     // Here is where the magic happens
+    // Add zooming to the Layout Attributes.
     override func layoutAttributesForElementsInRect(rect: CGRect) -> [AnyObject]? {
         
         var array = super.layoutAttributesForElementsInRect(rect)
@@ -60,6 +61,7 @@ class CardsViewFlowLayout:  UICollectionViewFlowLayout {
         return array
     }
     
+    //Focus the zoom in the middle.
     override func targetContentOffsetForProposedContentOffset(proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
                
         var offsetAdjustment:CGFloat = CGFloat(MAXFLOAT)
@@ -67,15 +69,14 @@ class CardsViewFlowLayout:  UICollectionViewFlowLayout {
         
         let targetRect = CGRectMake(proposedContentOffset.x, 0.0, collectionView!.bounds.size.width, collectionView!.bounds.size.height)
         
-        let array = super.layoutAttributesForElementsInRect(targetRect)
-        
-        for layoutAttributes in array! {
-            let itemHorizontalCenter: CGFloat = layoutAttributes.center.x
-            if (abs(itemHorizontalCenter - horizontalCenter) < abs(offsetAdjustment)) {
-                offsetAdjustment = itemHorizontalCenter - horizontalCenter
+        if let array = super.layoutAttributesForElementsInRect(targetRect) {
+            for layoutAttributes in array {
+                let itemHorizontalCenter: CGFloat = layoutAttributes.center.x
+                if (abs(itemHorizontalCenter - horizontalCenter) < abs(offsetAdjustment)) {
+                    offsetAdjustment = itemHorizontalCenter - horizontalCenter
+                }
             }
         }
-        
         
         return CGPointMake(proposedContentOffset.x + offsetAdjustment, proposedContentOffset.y)
     }

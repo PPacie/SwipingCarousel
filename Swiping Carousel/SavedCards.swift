@@ -21,7 +21,7 @@ class SavedCards {
     //Load some demo information into the [savedCards] Array.
     class func loadCards() -> [Card] {
         var savedCards = [Card]()
-        for index in 1...14 {
+        for index in 0...13 {
             let newCard = Card(image: UIImage(named:"image\(index).png"), name: "User\(index)", profession: "Profesion\(index)", mainDescription: "To share my idea with somebody! I want to start my own fashion company. It's going to be called Black Milk! Ping me if you want to chat 😜", activity: "Activity\(index)")
             savedCards.append(newCard)
         }

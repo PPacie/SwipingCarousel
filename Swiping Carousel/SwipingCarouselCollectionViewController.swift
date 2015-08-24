@@ -10,15 +10,11 @@ import UIKit
 
 let reuseIdentifier = "Card"
 
-class SwipingCarouselCollectionViewController: UICollectionViewController {
+class SwipingCarouselCollectionViewController: UICollectionViewController, CardViewCellDelegate{
     
     // MARK: Model
-    // Load allTheCards from SavedCards Class and reload the collection view when setted.
-    private var allTheCards = SavedCards.loadCards() {
-        didSet {
-            collectionView?.reloadData()
-        }
-    }
+    // Load allTheCards from SavedCards Class.
+    private var allTheCards = SavedCards.loadCards()
     // Create the Color Pallete using the UIColor Extension
     let colors = UIColor.palette()
     
@@ -41,10 +37,32 @@ class SwipingCarouselCollectionViewController: UICollectionViewController {
         cell.mainDescriptionLabel.text = currentCard.mainDescription
         cell.activityLabel.text = currentCard.activity
         cell.backgroundColor = colors[indexPath.item]
+        cell.delegate = self
         return cell
     }
-     
+    // MARK: Conform to the CellCollectionView Delegate
+    
+    func cardSwipedUp(cell: CardCollectionViewCell) {
+        println("Swiped Up - Card to Save: \(cell.nameLabel.text)")
+        
+        if let indexPath = collectionView?.indexPathForCell(cell) { //Get the IndexPath from Cell being passed (swiped up).
+            var indexPaths = [NSIndexPath]()
+            indexPaths.append(indexPath)
+            allTheCards.removeAtIndex(indexPath.row)                //Delete the swiped card from the Model.
+            collectionView?.deleteItemsAtIndexPaths(indexPaths)     //Delete the swiped card from CollectionView.
+        }
 
+    }
+    
+    func cardSwipedDown(cell: CardCollectionViewCell) {
+        println("Swiped Down - Card to Delete: \(cell.nameLabel.text)")
+        if let indexPath = collectionView?.indexPathForCell(cell) {
+            var indexPaths = [NSIndexPath]()
+            indexPaths.append(indexPath)
+            allTheCards.removeAtIndex(indexPath.row)
+            collectionView?.deleteItemsAtIndexPaths(indexPaths)
+        }
+    }
 
 }
     //Extension to create a pallete of colors which is being used to set the cell.backgroundColor
