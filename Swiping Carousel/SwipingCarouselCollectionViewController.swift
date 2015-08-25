@@ -19,6 +19,7 @@ class SwipingCarouselCollectionViewController: UICollectionViewController, CardV
     private struct Constants {
         static let LikedImage = "Liked"
         static let DislikedImage = "Disliked"
+        static let SegueIdentifier = "OpenChat"
     }
 
     
@@ -78,5 +79,25 @@ class SwipingCarouselCollectionViewController: UICollectionViewController, CardV
             collectionView?.deleteItemsAtIndexPaths(indexPaths)     //Delete the swiped card from CollectionView.
         }
     }
-
+    
+    //MARK: Segue Navigation
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
+        
+        if identifier == Constants.SegueIdentifier {
+            if let selectedRowIndex = collectionView?.indexPathsForSelectedItems().last as? NSIndexPath {
+                if let cell = collectionView?.cellForItemAtIndexPath(selectedRowIndex) {
+                    //We check if the selected Card is the one in the middle to open the chat. If it's not, we scroll to the side card selected.
+                    if cell.frame.size.height > cell.bounds.size.height {
+                        return true
+                    } else {
+                        collectionView?.scrollToItemAtIndexPath(selectedRowIndex, atScrollPosition: UICollectionViewScrollPosition.CenteredHorizontally, animated: true)
+                        return false
+                    }
+                }
+            }
+        }
+        
+        return true
+    }
 }
