@@ -16,6 +16,7 @@
 		6742B94E1B8613E50030424E /* SwipingCarouselCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6742B94D1B8613E50030424E /* SwipingCarouselCollectionViewController.swift */; };
 		6742B9501B861A930030424E /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6742B94F1B861A930030424E /* CardCollectionViewCell.swift */; };
 		6745DB5B1B86C78100A12482 /* SavedCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6745DB5A1B86C78100A12482 /* SavedCards.swift */; };
+		674CF6E81B8BDE1000084EB0 /* Cards.plist in Resources */ = {isa = PBXBuildFile; fileRef = 674CF6E71B8BDE1000084EB0 /* Cards.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		6742B94D1B8613E50030424E /* SwipingCarouselCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipingCarouselCollectionViewController.swift; sourceTree = "<group>"; };
 		6742B94F1B861A930030424E /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		6745DB5A1B86C78100A12482 /* SavedCards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedCards.swift; sourceTree = "<group>"; };
+		674CF6E71B8BDE1000084EB0 /* Cards.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Cards.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				6745DB5A1B86C78100A12482 /* SavedCards.swift */,
+				674CF6E71B8BDE1000084EB0 /* Cards.plist */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			files = (
 				6742B9331B8613230030424E /* Main.storyboard in Resources */,
 				6742B9381B8613230030424E /* LaunchScreen.xib in Resources */,
+				674CF6E81B8BDE1000084EB0 /* Cards.plist in Resources */,
 				6742B9351B8613230030424E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

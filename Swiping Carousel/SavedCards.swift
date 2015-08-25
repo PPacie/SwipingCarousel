@@ -17,18 +17,35 @@ class SavedCards {
         let mainDescription: String
         let activity: String
         let backgroundColor: UIColor
+        let likedCard: Bool
+        
+        init(dictionary: NSDictionary) {
+            self.image = UIImage(named: dictionary["Image"] as! String)
+            self.name = dictionary["Name"] as! String
+            self.profession = dictionary["Profession"] as! String
+            self.mainDescription = dictionary["Description"] as! String
+            self.activity = dictionary["Activity"] as! String
+            self.backgroundColor = UIColor.random
+            self.likedCard = dictionary["Liked"] as! Bool
+        }
     }
     
     //Load some demo information into the [savedCards] Array.
     class func loadCards() -> [Card] {
         var savedCards = [Card]()
-        for index in 1...20 {
-            let newCard = Card(image: UIImage(named:"image\(index).png"), name: "User\(index)", profession: "Profesion\(index)", mainDescription: "To share my idea with somebody! I want to start my own fashion company. It's going to be called Black Milk! Ping me if you want to chat 😜", activity: "Activity\(index)", backgroundColor: UIColor.random)
-            savedCards.append(newCard)
+        if let URL = NSBundle.mainBundle().URLForResource("Cards", withExtension: "plist") {
+            if let cardsFromPlist = NSArray(contentsOfURL: URL) {
+                for card in cardsFromPlist{
+                    let newCard = Card(dictionary: card as! NSDictionary)
+                    savedCards.append(newCard)
+                }
+            }
         }
         return savedCards
     }
+
 }
+
     //MARK: Extensions
     //Function to create a Random number in CGFloat.
 private extension CGFloat {
