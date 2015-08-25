@@ -17,7 +17,7 @@ class SavedCards {
         let mainDescription: String?
         let activity: String?
         let backgroundColor: UIColor
-        let likedCard: Bool?
+        var likedCard: Bool?
         
         init(dictionary: NSDictionary) {
             self.image = UIImage(named: (dictionary["Image"] as! String))

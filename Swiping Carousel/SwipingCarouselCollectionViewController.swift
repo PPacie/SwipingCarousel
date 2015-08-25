@@ -30,13 +30,14 @@ class SwipingCarouselCollectionViewController: UICollectionViewController, CardV
         
         // Configure the cell
         let currentCard = allTheCards[indexPath.row]
-        cell.imageView.image = currentCard.image
+        cell.profileImage.image = currentCard.image
         cell.nameLabel.text = currentCard.name
         cell.professionLabel.text = currentCard.profession
         cell.mainDescriptionLabel.text = currentCard.mainDescription
         cell.activityLabel.text = currentCard.activity
         cell.backgroundColor = currentCard.backgroundColor
         cell.delegate = self
+        cell.likeImage.image = currentCard.likedCard! ? UIImage(named: "Liked") : UIImage(named:"Unliked")
         return cell
     }
     // MARK: Conform to the CellCollectionView Delegate
@@ -45,21 +46,30 @@ class SwipingCarouselCollectionViewController: UICollectionViewController, CardV
         println("Swiped Up - Card to Save: \(cell.nameLabel.text)")
         
         if let indexPath = collectionView?.indexPathForCell(cell) { //Get the IndexPath from Cell being passed (swiped up).
-            var indexPaths = [NSIndexPath]()
-            indexPaths.append(indexPath)
-            allTheCards.removeAtIndex(indexPath.row)                //Delete the swiped card from the Model.
-            collectionView?.deleteItemsAtIndexPaths(indexPaths)     //Delete the swiped card from CollectionView.
+            //Change the Like status to Like/Dislike.
+            allTheCards[indexPath.row].likedCard! = !allTheCards[indexPath.row].likedCard!
+            // Update the Like Image
+            cell.likeImage.image = allTheCards[indexPath.row].likedCard! ? UIImage(named: "Liked") : UIImage(named:"Unliked")
+            //We are going to Scroll to the next item or to the previous one after Liking/Disliking a card. 
+            //So, we check if we ara at the end of the Array to know if we can scroll to the next item, otherwise we scroll back to the previous one.
+            if indexPath.row+1 < allTheCards.count {
+                let nextIndexPath = NSIndexPath(forRow: indexPath.row + 1, inSection: 0)
+                collectionView?.scrollToItemAtIndexPath(nextIndexPath, atScrollPosition: UICollectionViewScrollPosition.CenteredHorizontally, animated: true)
+            } else {
+                let previousIndexPath = NSIndexPath(forRow: indexPath.row - 1, inSection: 0)
+                collectionView?.scrollToItemAtIndexPath(previousIndexPath, atScrollPosition: UICollectionViewScrollPosition.CenteredHorizontally, animated: true)
+            }
         }
-
+        collectionView?.reloadData()
     }
     
     func cardSwipedDown(cell: CardCollectionViewCell) {
         println("Swiped Down - Card to Delete: \(cell.nameLabel.text)")
-        if let indexPath = collectionView?.indexPathForCell(cell) {
+        if let indexPath = collectionView?.indexPathForCell(cell) { //Get the IndexPath from Cell being passed (swiped down).
             var indexPaths = [NSIndexPath]()
             indexPaths.append(indexPath)
-            allTheCards.removeAtIndex(indexPath.row)
-            collectionView?.deleteItemsAtIndexPaths(indexPaths)
+            allTheCards.removeAtIndex(indexPath.row)                //Delete the swiped card from the Model.
+            collectionView?.deleteItemsAtIndexPaths(indexPaths)     //Delete the swiped card from CollectionView.
         }
     }
 

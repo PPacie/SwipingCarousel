@@ -16,11 +16,12 @@ protocol CardViewCellDelegate : class {
 
 class CardCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var professionLabel: UILabel!
     @IBOutlet weak var mainDescriptionLabel: UILabel!
     @IBOutlet weak var activityLabel: UILabel!
+    @IBOutlet weak var likeImage: UIImageView!
     
     weak var delegate: CardViewCellDelegate?
     
@@ -90,13 +91,13 @@ class CardCollectionViewCell: UICollectionViewCell {
     }
     
     func upAction() {
-        let maxTopPoint: CGPoint = CGPointMake(originalPoint.x, -frame.maxY)
+        //let maxTopPoint: CGPoint = CGPointMake(originalPoint.x, -frame.maxY)
         UIView.animateWithDuration(Constants.SwipeImageAnimationDuration, animations: { () -> Void in
-            self.center = maxTopPoint //Move the card up off the screen.
+            self.center = self.originalPoint //Move the card up off the screen.
             self.superview?.userInteractionEnabled = false //Deactivate the user interaction in the Superview (In this case will be in the collection view). To avoid scrolling during the animation.
         }) { (completion) -> Void in
             self.superview?.userInteractionEnabled = true // Re-activate the user interaction.
-            self.removeFromSuperview()
+          //  self.removeFromSuperview()
             self.delegate?.cardSwipedUp(self) //Delegate the SwipeUp action and send the view with it.
             
         }
