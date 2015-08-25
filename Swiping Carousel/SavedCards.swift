@@ -12,21 +12,21 @@ class SavedCards {
     
     struct Card {
         let image: UIImage?
-        let name: String
-        let profession: String
-        let mainDescription: String
-        let activity: String
+        let name: String?
+        let profession: String?
+        let mainDescription: String?
+        let activity: String?
         let backgroundColor: UIColor
-        let likedCard: Bool
+        let likedCard: Bool?
         
         init(dictionary: NSDictionary) {
-            self.image = UIImage(named: dictionary["Image"] as! String)
-            self.name = dictionary["Name"] as! String
-            self.profession = dictionary["Profession"] as! String
-            self.mainDescription = dictionary["Description"] as! String
-            self.activity = dictionary["Activity"] as! String
+            self.image = UIImage(named: (dictionary["Image"] as! String))
+            self.name = dictionary["Name"] as? String
+            self.profession = dictionary["Profession"] as? String
+            self.mainDescription = dictionary["Description"] as? String
+            self.activity = dictionary["Activity"] as? String
             self.backgroundColor = UIColor.random
-            self.likedCard = dictionary["Liked"] as! Bool
+            self.likedCard = dictionary["Liked"] as? Bool
         }
     }
     

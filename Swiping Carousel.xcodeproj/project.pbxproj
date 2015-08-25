@@ -117,6 +117,7 @@
 				6742B9311B8613230030424E /* Main.storyboard */,
 				6742B9341B8613230030424E /* Images.xcassets */,
 				6742B9361B8613230030424E /* LaunchScreen.xib */,
+				674CF6E71B8BDE1000084EB0 /* Cards.plist */,
 				6742B92C1B8613230030424E /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -143,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				6745DB5A1B86C78100A12482 /* SavedCards.swift */,
-				674CF6E71B8BDE1000084EB0 /* Cards.plist */,
 			);
 			name = Model;
 			sourceTree = "<group>";
