@@ -100,11 +100,25 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQP-BR-c5z">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tick" translatesAutoresizingMaskIntoConstraints="NO" id="QyC-jN-bgY">
-                                        <rect key="frame" x="260" y="8" width="80" height="62"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tick" translatesAutoresizingMaskIntoConstraints="NO" id="QyC-jN-bgY">
+                                        <rect key="frame" x="280" y="60" width="40" height="31"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DeleteX" translatesAutoresizingMaskIntoConstraints="NO" id="dSz-8a-iW9">
+                                        <rect key="frame" x="284" y="508" width="32" height="32"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfileMe" translatesAutoresizingMaskIntoConstraints="NO" id="lea-JJ-1Kr">
+                                        <rect key="frame" x="8" y="8" width="76" height="40"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.40000000000000002" green="0.36470588235294116" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="QyC-jN-bgY" secondAttribute="centerX" id="42G-2H-G4a"/>
+                                    <constraint firstAttribute="centerX" secondItem="dSz-8a-iW9" secondAttribute="centerX" id="BRG-eG-weC"/>
+                                    <constraint firstAttribute="bottom" secondItem="dSz-8a-iW9" secondAttribute="bottom" constant="60" id="nCD-bI-PaR"/>
+                                    <constraint firstItem="lea-JJ-1Kr" firstAttribute="top" secondItem="gQP-BR-c5z" secondAttribute="top" constant="8" id="qSI-hp-sxg"/>
+                                    <constraint firstItem="lea-JJ-1Kr" firstAttribute="leading" secondItem="gQP-BR-c5z" secondAttribute="leading" constant="8" id="ula-Uf-Dce"/>
+                                    <constraint firstItem="QyC-jN-bgY" firstAttribute="top" secondItem="gQP-BR-c5z" secondAttribute="top" constant="60" id="ygk-GZ-bAP"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -123,6 +137,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Tick" width="80" height="62"/>
+        <image name="DeleteX" width="32" height="32"/>
+        <image name="ProfileMe" width="76" height="40"/>
+        <image name="Tick" width="40" height="31"/>
     </resources>
 </document>

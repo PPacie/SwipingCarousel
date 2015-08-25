@@ -43,9 +43,10 @@ class SwipingCarouselCollectionViewController: UICollectionViewController, CardV
     // MARK: Conform to the CellCollectionView Delegate
     
     func cardSwipedUp(cell: CardCollectionViewCell) {
-        println("Swiped Up - Card to Save: \(cell.nameLabel.text)")
         
-        if let indexPath = collectionView?.indexPathForCell(cell) { //Get the IndexPath from Cell being passed (swiped up).
+        println("Swiped Up - Card to Like: \(cell.nameLabel.text)")
+        //Get the IndexPath from Cell being passed (swiped up).
+        if let indexPath = collectionView?.indexPathForCell(cell) {
             //Change the Like status to Like/Dislike.
             allTheCards[indexPath.row].likedCard! = !allTheCards[indexPath.row].likedCard!
             // Update the Like Image
@@ -64,6 +65,7 @@ class SwipingCarouselCollectionViewController: UICollectionViewController, CardV
     }
     
     func cardSwipedDown(cell: CardCollectionViewCell) {
+        
         println("Swiped Down - Card to Delete: \(cell.nameLabel.text)")
         if let indexPath = collectionView?.indexPathForCell(cell) { //Get the IndexPath from Cell being passed (swiped down).
             var indexPaths = [NSIndexPath]()
