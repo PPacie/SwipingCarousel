@@ -11,17 +11,21 @@ UICollectionView-based swiping carousel using Swift 1.2 and Xcode 6.4
 *	When tapping on the side cards, it will scroll to them.
 *	When swiping up or down on the side cards, they won't be liked or dismissed. Just moved.
 
-## How can you create your own swiping carousel?
-* You will need to copy/add the layout file named `CardsViewFlowLayout.swift` file to your project. 
-* Then, you need to set it as your Custom layout: a) You can do it either in the Interface Builder or b)programmatically.
-a) Interface Builder: Go to your Storyboard file and select the Controller where you have the CollectionView . Later select the CollectionView in the Document Outline and set the `CardsViewFlowLayout` as the Custom Layout in the Attributes Inspector.
+## How can I create my own swiping carousel?
+*   You will need to copy/add the layout file named `CardsViewFlowLayout.swift` file to your project. 
+*   Then, you need to set it as your Custom layout: You can do it either in the Interface Builder or programmatically.
+1. Interface Builder: Go to your Storyboard file and select the Controller where you have the CollectionView . Later select the CollectionView in the Document Outline and set the `CardsViewFlowLayout` as the Custom Layout in the Attributes Inspector.
+
 ![alt tag](https://github.com/PPacie/Swiping-Carousel/blob/master/AddCustomLayout.png)
-b) Programmaticaly: 
+
+2. Programmaticaly: 
 Add the following line in the ViewDidLoad() of your CollectionViewController:
+
 ```collectionView?.setCollectionViewLayout(CardsViewFlowLayout(), animated: false)```
 
-## How can I customize the Layout?
-* You are able to customize the Layout by editing the following lines in the `CardsViewFlowLayout.swift` file:
+## Can I customize the Layout?
+* Sure, you are able to customize the layout by editing the following lines in the `CardsViewFlowLayout.swift` file:
+
 ```
     // Mark: Constants 
     private struct CardsViewFlowConstants {
