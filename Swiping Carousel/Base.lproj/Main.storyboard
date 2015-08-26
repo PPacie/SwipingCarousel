@@ -37,7 +37,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profession" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Nb-JO-gdd">
-                                            <rect key="frame" x="71" y="36" width="131" height="15"/>
+                                            <rect key="frame" x="71" y="36" width="131" height="20"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -52,7 +52,7 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MAW-PN-Bdd">
                                             <rect key="frame" x="177" y="245" width="25" height="25"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uux-Pi-5XW">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activity" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uux-Pi-5XW">
                                             <rect key="frame" x="8" y="245" width="161" height="25"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -120,10 +120,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tick" translatesAutoresizingMaskIntoConstraints="NO" id="QyC-jN-bgY">
-                                        <rect key="frame" x="280" y="60" width="40" height="31"/>
+                                        <rect key="frame" x="280" y="56" width="40" height="31"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DeleteX" translatesAutoresizingMaskIntoConstraints="NO" id="dSz-8a-iW9">
-                                        <rect key="frame" x="284" y="508" width="32" height="32"/>
+                                        <rect key="frame" x="284" y="548" width="32" height="32"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfileMe" translatesAutoresizingMaskIntoConstraints="NO" id="lea-JJ-1Kr">
                                         <rect key="frame" x="8" y="8" width="76" height="40"/>
@@ -133,10 +133,10 @@
                                 <constraints>
                                     <constraint firstAttribute="centerX" secondItem="QyC-jN-bgY" secondAttribute="centerX" id="42G-2H-G4a"/>
                                     <constraint firstAttribute="centerX" secondItem="dSz-8a-iW9" secondAttribute="centerX" id="BRG-eG-weC"/>
-                                    <constraint firstAttribute="bottom" secondItem="dSz-8a-iW9" secondAttribute="bottom" constant="60" id="nCD-bI-PaR"/>
+                                    <constraint firstItem="QyC-jN-bgY" firstAttribute="top" secondItem="lea-JJ-1Kr" secondAttribute="bottom" constant="8" symbolic="YES" id="Dm7-pj-kUy"/>
+                                    <constraint firstAttribute="bottom" secondItem="dSz-8a-iW9" secondAttribute="bottom" constant="20" symbolic="YES" id="nCD-bI-PaR"/>
                                     <constraint firstItem="lea-JJ-1Kr" firstAttribute="top" secondItem="gQP-BR-c5z" secondAttribute="top" constant="8" id="qSI-hp-sxg"/>
                                     <constraint firstItem="lea-JJ-1Kr" firstAttribute="leading" secondItem="gQP-BR-c5z" secondAttribute="leading" constant="8" id="ula-Uf-Dce"/>
-                                    <constraint firstItem="QyC-jN-bgY" firstAttribute="top" secondItem="gQP-BR-c5z" secondAttribute="top" constant="60" id="ygk-GZ-bAP"/>
                                 </constraints>
                             </view>
                         </subviews>
