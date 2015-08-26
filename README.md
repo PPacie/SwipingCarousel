@@ -22,12 +22,14 @@ UICollectionView-based swiping carousel using Swift 1.2 and Xcode 6.4
 *   Programmaticaly: 
 Add the following line in the ViewDidLoad() of your CollectionViewController:
 
-```collectionView?.setCollectionViewLayout(CardsViewFlowLayout(), animated: false)```
+```swift
+collectionView?.setCollectionViewLayout(CardsViewFlowLayout(), animated: false)
+```
 
 ## Can I customize the Layout?
 Sure, you are able to customize the layout by editing the following lines in the `CardsViewFlowLayout.swift` file:
 
-```
+```swift
     // Mark: Constants 
     private struct CardsViewFlowConstants {
         static let activeDistance: CGFloat = 200
