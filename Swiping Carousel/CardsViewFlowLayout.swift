@@ -24,13 +24,13 @@ class CardsViewFlowLayout:  UICollectionViewFlowLayout {
     override func prepareLayout() {
         super.prepareLayout()
         
-        self.itemSize = CGSizeMake(CardsViewFlowConstants.itemWidth, CardsViewFlowConstants.itemHeight)
-        self.scrollDirection = .Horizontal
-        self.minimumLineSpacing = CardsViewFlowConstants.minLineSpacing
+        itemSize = CGSizeMake(CardsViewFlowConstants.itemWidth, CardsViewFlowConstants.itemHeight)
+        scrollDirection = .Horizontal
+        minimumLineSpacing = CardsViewFlowConstants.minLineSpacing
         //These numbers will depend on the size of your cards you have set in the CardsViewFlowConstants.
         //60 - will let the first and last card of the CollectionView to be centered.
         //100 - will avoid the double rows in the CollectionView
-        self.sectionInset = UIEdgeInsetsMake(100.0, 60.0, 100, 60.0)
+        sectionInset = UIEdgeInsetsMake(100.0, 60.0, 100, 60.0)
         
     }
     
