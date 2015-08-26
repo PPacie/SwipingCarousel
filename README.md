@@ -12,19 +12,20 @@ UICollectionView-based swiping carousel using Swift 1.2 and Xcode 6.4
 *	When swiping up or down on the side cards, they won't be liked or dismissed. Just moved.
 
 ## How can I create my own swiping carousel?
-*   You will need to copy/add the layout file named `CardsViewFlowLayout.swift` file to your project. 
-*   Then, you need to set it as your Custom layout: You can do it either in the Interface Builder or programmatically.
-1. Interface Builder: Go to your Storyboard file and select the Controller where you have the CollectionView . Later select the CollectionView in the Document Outline and set the `CardsViewFlowLayout` as the Custom Layout in the Attributes Inspector.
+1.  You will need to copy/add the layout file named `CardsViewFlowLayout.swift` file to your project. 
+2.  Then, you need to set it as your Custom layout: You can do it either in the Interface Builder OR programmatically.
+
+*   Interface Builder: Go to your Storyboard file and select the Controller where you have the CollectionView . Later select the CollectionView in the Document Outline and set the `CardsViewFlowLayout` as the Custom Layout in the Attributes Inspector.
 
 ![alt tag](https://github.com/PPacie/Swiping-Carousel/blob/master/AddCustomLayout.png)
 
-2. Programmaticaly: 
+*   Programmaticaly: 
 Add the following line in the ViewDidLoad() of your CollectionViewController:
 
 ```collectionView?.setCollectionViewLayout(CardsViewFlowLayout(), animated: false)```
 
 ## Can I customize the Layout?
-* Sure, you are able to customize the layout by editing the following lines in the `CardsViewFlowLayout.swift` file:
+Sure, you are able to customize the layout by editing the following lines in the `CardsViewFlowLayout.swift` file:
 
 ```
     // Mark: Constants 
