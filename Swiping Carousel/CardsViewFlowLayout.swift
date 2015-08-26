@@ -15,8 +15,8 @@ class CardsViewFlowLayout:  UICollectionViewFlowLayout {
     private struct CardsViewFlowConstants {
         static let activeDistance: CGFloat = 200
         static let zoomFactor: CGFloat = 0.3
-        static let itemWidth: CGFloat = 210
-        static let itemHeight: CGFloat = 278
+        static let itemWidth: CGFloat = 210       //Width of the Cell.
+        static let itemHeight: CGFloat = 278      //Height of the Cell.
         static let minLineSpacing: CGFloat = 50.0
         
     }
