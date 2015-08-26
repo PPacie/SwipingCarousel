@@ -68,7 +68,6 @@
 			isa = PBXGroup;
 			children = (
 				6742B94F1B861A930030424E /* CardCollectionViewCell.swift */,
-				6702087A1B868F5400F1E4EF /* CardsViewFlowLayout.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -105,6 +104,7 @@
 				6745DB591B86AD5D00A12482 /* Model */,
 				670208791B868F0300F1E4EF /* Views */,
 				6702087C1B868FD600F1E4EF /* Controllers */,
+				674D1E1B1B8D7685004382D8 /* Layouts */,
 				6742B92B1B8613230030424E /* Supporting Files */,
 			);
 			path = "Swiping Carousel";
@@ -146,6 +146,14 @@
 				6745DB5A1B86C78100A12482 /* SavedCards.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		674D1E1B1B8D7685004382D8 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				6702087A1B868F5400F1E4EF /* CardsViewFlowLayout.swift */,
+			);
+			name = Layouts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
