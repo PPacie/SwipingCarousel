@@ -33,8 +33,8 @@ class SavedCards {
     //Load some demo information into the [savedCards] Array.
     class func loadCards() -> [Card] {
         var savedCards = [Card]()
-        if let URL = NSBundle.mainBundle().URLForResource("Cards", withExtension: "plist") {
-            if let cardsFromPlist = NSArray(contentsOfURL: URL) {
+        if let URL = Bundle.main.url(forResource: "Cards", withExtension: "plist") {
+            if let cardsFromPlist = NSArray(contentsOf: URL) {
                 for card in cardsFromPlist{
                     let newCard = Card(dictionary: card as! NSDictionary)
                     savedCards.append(newCard)
@@ -49,7 +49,7 @@ class SavedCards {
     //MARK: Extensions
     //Function to create a Random number in CGFloat.
 private extension CGFloat {
-    static func random (max: Int) -> CGFloat {
+    static func random (_ max: Int) -> CGFloat {
         return CGFloat (arc4random() % UInt32(max))
     }
 }
@@ -57,7 +57,7 @@ private extension CGFloat {
     //Function to create a color from RGB and Computed property to get a Random UIColor based on this UIColorFromRGB method.
 private extension UIColor {
     
-    class func colorFromRGB(r: Int, g: Int, b: Int) -> UIColor {
+    class func colorFromRGB(_ r: Int, g: Int, b: Int) -> UIColor {
         return UIColor(red: CGFloat(Float(r) / 255), green: CGFloat(Float(g) / 255), blue: CGFloat(Float(b) / 255), alpha: 1)
     }
 
@@ -76,7 +76,7 @@ private extension UIColor {
         case 10: return UIColor.colorFromRGB(170, g: 85, b: 85)
         case 11: return UIColor.colorFromRGB(85, g: 170, b: 255)
         case 12: return UIColor.colorFromRGB(0, g: 170, b: 170)
-        default : return UIColor.blackColor() //Not going to be called
+        default : return UIColor.black //Not going to be called
         }
     }
 }

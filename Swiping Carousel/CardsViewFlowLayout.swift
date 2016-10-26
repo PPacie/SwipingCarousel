@@ -12,7 +12,7 @@ import UIKit
 class CardsViewFlowLayout:  UICollectionViewFlowLayout {
     
     // Mark: Constants 
-    private struct CardsViewFlowConstants {
+    fileprivate struct CardsViewFlowConstants {
         static let activeDistance: CGFloat = 200
         static let zoomFactor: CGFloat = 0.3
         static let itemWidth: CGFloat = 210       //Width of the Cell.
@@ -21,11 +21,11 @@ class CardsViewFlowLayout:  UICollectionViewFlowLayout {
         
     }
     
-    override func prepareLayout() {
-        super.prepareLayout()
+    override func prepare() {
+        super.prepare()
         
-        itemSize = CGSizeMake(CardsViewFlowConstants.itemWidth, CardsViewFlowConstants.itemHeight)
-        scrollDirection = .Horizontal
+        itemSize = CGSize(width: CardsViewFlowConstants.itemWidth, height: CardsViewFlowConstants.itemHeight)
+        scrollDirection = .horizontal
         minimumLineSpacing = CardsViewFlowConstants.minLineSpacing
         //These numbers will depend on the size of your cards you have set in the CardsViewFlowConstants.
         //60 - will let the first and last card of the CollectionView to be centered.
@@ -33,22 +33,21 @@ class CardsViewFlowLayout:  UICollectionViewFlowLayout {
         sectionInset = UIEdgeInsetsMake(100.0, 60.0, 100, 60.0)
         
     }
-    
-    
+
     // Here is where the magic happens
     // Add zooming to the Layout Attributes.
-    override func layoutAttributesForElementsInRect(rect: CGRect) -> [AnyObject]? {
+    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         
-        var array = super.layoutAttributesForElementsInRect(rect)
+        let array = super.layoutAttributesForElements(in: rect)
         
         var visibleRect = CGRect()
         visibleRect.origin = collectionView!.contentOffset
         visibleRect.size = collectionView!.bounds.size
         
         for attributes in array! {
-            var newAttributes: UICollectionViewLayoutAttributes = attributes as! UICollectionViewLayoutAttributes
-            if CGRectIntersectsRect(attributes.frame, rect) {
-                let distance = CGRectGetMidX(visibleRect) - attributes.center.x
+            let newAttributes: UICollectionViewLayoutAttributes = attributes 
+            if attributes.frame.intersects(rect) {
+                let distance = visibleRect.midX - attributes.center.x
                 let normalizedDistance = distance / CardsViewFlowConstants.activeDistance
                 if (abs(distance)) < CardsViewFlowConstants.activeDistance {
                     let zoom = 1 + CardsViewFlowConstants.zoomFactor*(1 - abs(normalizedDistance))
@@ -59,17 +58,19 @@ class CardsViewFlowLayout:  UICollectionViewFlowLayout {
         }
         
         return array
+
     }
+
     
     //Focus the zoom in the middle Card.
-    override func targetContentOffsetForProposedContentOffset(proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
+    override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
                
         var offsetAdjustment:CGFloat = CGFloat(MAXFLOAT)
-        let horizontalCenter = proposedContentOffset.x + (CGRectGetWidth(collectionView!.bounds) / 2.0)
+        let horizontalCenter = proposedContentOffset.x + (collectionView!.bounds.width / 2.0)
         
-        let targetRect = CGRectMake(proposedContentOffset.x, 0.0, collectionView!.bounds.size.width, collectionView!.bounds.size.height)
+        let targetRect = CGRect(x: proposedContentOffset.x, y: 0.0, width: collectionView!.bounds.size.width, height: collectionView!.bounds.size.height)
         
-        if let array = super.layoutAttributesForElementsInRect(targetRect) {
+        if let array = super.layoutAttributesForElements(in: targetRect) {
             for layoutAttributes in array {
                 let itemHorizontalCenter: CGFloat = layoutAttributes.center.x
                 if (abs(itemHorizontalCenter - horizontalCenter) < abs(offsetAdjustment)) {
@@ -78,12 +79,12 @@ class CardsViewFlowLayout:  UICollectionViewFlowLayout {
             }
         }
         
-        return CGPointMake(proposedContentOffset.x + offsetAdjustment, proposedContentOffset.y)
+        return CGPoint(x: proposedContentOffset.x + offsetAdjustment, y: proposedContentOffset.y)
     }
     
     
     // Invalidate the Layout when the user is scrolling
-    override func shouldInvalidateLayoutForBoundsChange(newBounds: CGRect) -> Bool {
+    override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
         return true
     }
 
