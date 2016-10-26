@@ -2,7 +2,7 @@
 //  CardCollectionViewCell.swift
 //  Swiping Carousel
 //
-//  Created by Pablo Surfate on 8/20/15.
+//  Created by Pablo Paciello on 8/20/15.
 //  Copyright (c) 2015 Pablo Paciello. All rights reserved.
 //
 
@@ -36,19 +36,20 @@ class CardCollectionViewCell: UICollectionViewCell {
         self.layer.shadowOpacity = 0.6
         // Emphasize the shadow on the bottom and right sides of the cell
         self.layer.shadowOffset = CGSize(width: 4, height: 4)
+        print ("Distance:", UIScreen.main.bounds.size.height/5 )
         
     }
     
     // MARK: Gestures Handling
     
     fileprivate struct Constants {
-        static let SwipeDistanceToTakeAction: CGFloat  = 140 //Distance required for the card to go off the screen.
+        static let SwipeDistanceToTakeAction: CGFloat  = UIScreen.main.bounds.size.height / 4 //140 //Distance required for the card to go off the screen.
         static let SwipeImageAnimationDuration: TimeInterval = 0.30 //Duration of the Animation when Swiping Up/Down.
         static let CenterImageAnimationDuration: TimeInterval = 0.20 //Duration of the Animation when image gets back to original postion.
     }
     
-    var swipeDistanceOnY = CGFloat() //Distance of the swipe over "y" axis.
-    var originalPoint = CGPoint()
+    fileprivate var swipeDistanceOnY = CGFloat() //Distance of the swipe over "y" axis.
+    fileprivate var originalPoint = CGPoint()
     
     func handlePanGesture(_ sender: UIPanGestureRecognizer) {        
         

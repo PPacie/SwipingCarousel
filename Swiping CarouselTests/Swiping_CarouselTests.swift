@@ -2,7 +2,7 @@
 //  Swiping_CarouselTests.swift
 //  Swiping CarouselTests
 //
-//  Created by Pablo Surfate on 8/20/15.
+//  Created by Pablo Paciello on 8/20/15.
 //  Copyright (c) 2015 Pablo Paciello. All rights reserved.
 //
 

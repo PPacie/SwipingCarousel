@@ -2,7 +2,7 @@
 //  SwipingCarouselCollectionViewController.swift
 //  Swiping Carousel
 //
-//  Created by Pablo Surfate on 8/20/15.
+//  Created by Pablo Paciello on 8/20/15.
 //  Copyright (c) 2015 Pablo Paciello. All rights reserved.
 //
 
@@ -14,7 +14,7 @@ class SwipingCarouselCollectionViewController: UICollectionViewController, CardV
     
     // MARK: Model
     // Load allTheCards from SavedCards Class.
-    fileprivate var allTheCards = SavedCards.loadCards()
+    fileprivate var allTheCards = Card.loadCards()
     
     fileprivate struct Constants {
         static let LikedImage = "Liked"
