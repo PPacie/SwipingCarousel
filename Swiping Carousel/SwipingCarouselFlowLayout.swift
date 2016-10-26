@@ -8,11 +8,10 @@
 
 import UIKit
 
-
-class CardsViewFlowLayout:  UICollectionViewFlowLayout {
+class SwipingCarouselFlowLayout:  UICollectionViewFlowLayout {
     
     // Mark: Constants 
-    fileprivate struct CardsViewFlowConstants {
+    fileprivate struct Constants {
         static let activeDistance: CGFloat = 200
         static let zoomFactor: CGFloat = 0.3
         static let itemWidth: CGFloat = 210       //Width of the Cell.
@@ -24,9 +23,9 @@ class CardsViewFlowLayout:  UICollectionViewFlowLayout {
     override func prepare() {
         super.prepare()
         
-        itemSize = CGSize(width: CardsViewFlowConstants.itemWidth, height: CardsViewFlowConstants.itemHeight)
+        itemSize = CGSize(width: Constants.itemWidth, height: Constants.itemHeight)
         scrollDirection = .horizontal
-        minimumLineSpacing = CardsViewFlowConstants.minLineSpacing
+        minimumLineSpacing = Constants.minLineSpacing
         //These numbers will depend on the size of your cards you have set in the CardsViewFlowConstants.
         //60 - will let the first and last card of the CollectionView to be centered.
         //100 - will avoid the double rows in the CollectionView
@@ -48,9 +47,9 @@ class CardsViewFlowLayout:  UICollectionViewFlowLayout {
             let newAttributes: UICollectionViewLayoutAttributes = attributes 
             if attributes.frame.intersects(rect) {
                 let distance = visibleRect.midX - attributes.center.x
-                let normalizedDistance = distance / CardsViewFlowConstants.activeDistance
-                if (abs(distance)) < CardsViewFlowConstants.activeDistance {
-                    let zoom = 1 + CardsViewFlowConstants.zoomFactor*(1 - abs(normalizedDistance))
+                let normalizedDistance = distance / Constants.activeDistance
+                if (abs(distance)) < Constants.activeDistance {
+                    let zoom = 1 + Constants.zoomFactor*(1 - abs(normalizedDistance))
                     newAttributes.transform3D = CATransform3DMakeScale(zoom, zoom, 1.0)
                     newAttributes.zIndex = 1
                 }

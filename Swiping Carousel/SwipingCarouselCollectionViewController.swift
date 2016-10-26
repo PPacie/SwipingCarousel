@@ -10,7 +10,7 @@ import UIKit
 
 let reuseIdentifier = "Card"
 
-class SwipingCarouselCollectionViewController: UICollectionViewController, CardViewCellDelegate{
+class SwipingCarouselCollectionViewController: UICollectionViewController, SwipingCarouselCellDelegate{
     
     // MARK: Model
     // Load allTheCards from SavedCards Class.
@@ -36,8 +36,9 @@ class SwipingCarouselCollectionViewController: UICollectionViewController, CardV
     
     // MARK: Conform to the CellCollectionView Delegate
     
-    func cardSwipedUp(_ cell: CardCollectionViewCell) {
+    func cardSwipedUp(_ cell: UICollectionViewCell) {
         
+        guard let cell = cell as? CardCollectionViewCell else { return }
         print("Swiped Up - Card to Like: \(cell.nameLabel.text)")
         //Get the IndexPath from Cell being passed (swiped up).
         if let indexPath = collectionView?.indexPath(for: cell) {
@@ -57,14 +58,16 @@ class SwipingCarouselCollectionViewController: UICollectionViewController, CardV
         }
     }
     
-    func cardSwipedDown(_ cell: CardCollectionViewCell) {
+    func cardSwipedDown(_ cell: UICollectionViewCell) {
         
+        guard let cell = cell as? CardCollectionViewCell else { return }
         print("Swiped Down - Card to Delete: \(cell.nameLabel.text)")
         if let indexPath = collectionView?.indexPath(for: cell) { //Get the IndexPath from Cell being passed (swiped down).
             var indexPaths = [IndexPath]()
             indexPaths.append(indexPath)
             allTheCards.remove(at: (indexPath as NSIndexPath).row)                //Delete the swiped card from the Model.
             collectionView?.deleteItems(at: indexPaths)     //Delete the swiped card from CollectionView.
+            cell.removeFromSuperview()
         }
     }
     
