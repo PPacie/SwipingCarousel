@@ -15,13 +15,7 @@ class SwipingCarouselCollectionViewController: UICollectionViewController, CardV
     // MARK: Model
     // Load allTheCards from SavedCards Class.
     fileprivate var allTheCards = Card.loadCards()
-    
-    fileprivate struct Constants {
-        static let LikedImage = "Liked"
-        static let DislikedImage = "Disliked"
-        static let SegueIdentifier = "OpenChat"
-    }
-
+    fileprivate let segueIdentifier = "OpenChat"
     
     // MARK: UICollectionViewDataSource
 
@@ -35,18 +29,10 @@ class SwipingCarouselCollectionViewController: UICollectionViewController, CardV
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CardCollectionViewCell
         
         // Configure the cell
-        let currentCard = allTheCards[(indexPath as NSIndexPath).row]
-        cell.profileImage.image = currentCard.image
-        cell.nameLabel.text = currentCard.name
-        cell.professionLabel.text = currentCard.profession
-        cell.mainDescriptionLabel.text = currentCard.mainDescription
-        cell.activityLabel.text = currentCard.activity
-        cell.backgroundColor = currentCard.backgroundColor
+        cell.populateWith(card: allTheCards[(indexPath as NSIndexPath).row])
         cell.delegate = self
-        cell.likeImage.image = currentCard.likedCard! ? UIImage(named: Constants.LikedImage) : UIImage(named:Constants.DislikedImage)
         return cell
     }
-    
     
     // MARK: Conform to the CellCollectionView Delegate
     
@@ -58,7 +44,7 @@ class SwipingCarouselCollectionViewController: UICollectionViewController, CardV
             //Change the Like status to Like/Dislike.
             allTheCards[(indexPath as NSIndexPath).row].likedCard! = !allTheCards[(indexPath as NSIndexPath).row].likedCard!
             // Update the Like Image
-            cell.likeImage.image = allTheCards[(indexPath as NSIndexPath).row].likedCard! ? UIImage(named: Constants.LikedImage) : UIImage(named:Constants.DislikedImage)
+            cell.likeImage.image = allTheCards[(indexPath as NSIndexPath).row].likedCard! ? UIImage(named: "Liked") : UIImage(named:"Disliked")
             //We are going to Scroll to the next item or to the previous one after Liking/Disliking a card. 
             //So, we check if we ara at the end of the Array to know if we can scroll to the next item.
             if (indexPath as NSIndexPath).row+1 < allTheCards.count {
@@ -86,7 +72,7 @@ class SwipingCarouselCollectionViewController: UICollectionViewController, CardV
     
     override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
         
-        if identifier == Constants.SegueIdentifier {
+        if identifier == segueIdentifier {
             if let selectedRowIndex = collectionView?.indexPathsForSelectedItems?.last {
                 if let cell = collectionView?.cellForItem(at: selectedRowIndex) {
                     //We check if the selected Card is the one in the middle to open the chat. If it's not, we scroll to the side card selected.

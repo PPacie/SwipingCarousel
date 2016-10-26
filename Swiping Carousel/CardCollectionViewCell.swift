@@ -36,14 +36,23 @@ class CardCollectionViewCell: UICollectionViewCell {
         self.layer.shadowOpacity = 0.6
         // Emphasize the shadow on the bottom and right sides of the cell
         self.layer.shadowOffset = CGSize(width: 4, height: 4)
-        print ("Distance:", UIScreen.main.bounds.size.height/5 )
+    }
+    
+    func populateWith(card: Card) {
         
+        profileImage.image = card.image
+        nameLabel.text = card.name
+        professionLabel.text = card.profession
+        mainDescriptionLabel.text = card.mainDescription
+        activityLabel.text = card.activity
+        backgroundColor = card.backgroundColor        
+        likeImage.image = card.likedCard! ? UIImage(named: "Liked") : UIImage(named:"Disliked")
     }
     
     // MARK: Gestures Handling
     
     fileprivate struct Constants {
-        static let SwipeDistanceToTakeAction: CGFloat  = UIScreen.main.bounds.size.height / 4 //140 //Distance required for the card to go off the screen.
+        static let SwipeDistanceToTakeAction: CGFloat  = UIScreen.main.bounds.size.height / 5 //140 //Distance required for the card to go off the screen.
         static let SwipeImageAnimationDuration: TimeInterval = 0.30 //Duration of the Animation when Swiping Up/Down.
         static let CenterImageAnimationDuration: TimeInterval = 0.20 //Duration of the Animation when image gets back to original postion.
     }
@@ -92,15 +101,12 @@ class CardCollectionViewCell: UICollectionViewCell {
     }
     
     func upAction() {
-        //let maxTopPoint: CGPoint = CGPointMake(originalPoint.x, -frame.maxY)
         UIView.animate(withDuration: Constants.SwipeImageAnimationDuration, animations: { () -> Void in
-            self.center = self.originalPoint //Move the card up off the screen.
+            self.center = self.originalPoint //Move the card back to the original point.
             self.superview?.isUserInteractionEnabled = false //Deactivate the user interaction in the Superview (In this case will be in the collection view). To avoid scrolling during the animation.
         }, completion: { (completion) -> Void in
             self.superview?.isUserInteractionEnabled = true // Re-activate the user interaction.
-          //  self.removeFromSuperview()
             self.delegate?.cardSwipedUp(self) //Delegate the SwipeUp action and send the view with it.
-            
         }) 
         
     }
@@ -114,9 +120,6 @@ class CardCollectionViewCell: UICollectionViewCell {
             self.superview?.isUserInteractionEnabled = true // Re-activate the user interaction.
             self.removeFromSuperview()
             self.delegate?.cardSwipedDown(self) //Delegate the SwipeDown action and send the view with it.
-        }) 
-        
+        })
     }
-
-    
 }
