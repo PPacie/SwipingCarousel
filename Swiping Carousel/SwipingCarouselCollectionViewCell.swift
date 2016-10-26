@@ -8,15 +8,17 @@
 
 import UIKit
 
-//Protocol to inform its delegate of a Card being swiped up or down.
+//Protocol to inform the delegate of a SwipingCarouselCell that cell is being swiped up or down.
 protocol SwipingCarouselCellDelegate : class {
-    func cardSwipedUp(_ cell: UICollectionViewCell)
-    func cardSwipedDown(_ cell: UICollectionViewCell)
+    func cellSwipedUp(_ cell: UICollectionViewCell)
+    func cellSwipedDown(_ cell: UICollectionViewCell)
 }
 
 class SwipingCarouselCollectionViewCell: UICollectionViewCell {
     
     weak var delegate: SwipingCarouselCellDelegate?
+    var deleteOnSwipeUp = false
+    var deleteOnSwipeDown = false
     
     required init(coder: NSCoder) {
         super.init(coder: coder)!
@@ -27,7 +29,7 @@ class SwipingCarouselCollectionViewCell: UICollectionViewCell {
  
     // MARK: Gestures Handling
     fileprivate struct Constants {
-        static let SwipeDistanceToTakeAction: CGFloat  = UIScreen.main.bounds.size.height / 5 //Distance required for the card to go off the screen.
+        static let SwipeDistanceToTakeAction: CGFloat  = UIScreen.main.bounds.size.height / 5 //Distance required for the cell to go off the screen.
         static let SwipeImageAnimationDuration: TimeInterval = 0.30 //Duration of the Animation when Swiping Up/Down.
         static let CenterImageAnimationDuration: TimeInterval = 0.20 //Duration of the Animation when image gets back to original postion.
     }
@@ -43,7 +45,7 @@ class SwipingCarouselCollectionViewCell: UICollectionViewCell {
         case .began:
             originalPoint = self.center //Get the center of the Cell.
         case .changed:
-            //Move the card to the Y point while gesturing.
+            //Move the cell to the Y point while gesturing.
             self.center = CGPoint(x: originalPoint.x, y: originalPoint.y + swipeDistanceOnY)
         case .ended:
             //Take action after the Swipe gesture ends.
@@ -54,9 +56,9 @@ class SwipingCarouselCollectionViewCell: UICollectionViewCell {
     }
     
     fileprivate func afterSwipeAction() {
-        //First, we check if the swiped card is the one in the middle of screen by cheking its size. If the card is one of the sides, we send it back to its original position.
+        //First, we check if the swiped cell is the one in the middle of screen by cheking its size. If the cell is one of the sides, we send it back to its original position.
         if (self.frame.size.height > self.bounds.size.height) {
-            //If the card is the one at the center (biggest one), we proceed to check wheather or not the distance of the gesture is enough to move the card off the screen (up or down).
+            //If the cell is the one at the center (biggest one), we proceed to check wheather or not the distance of the gesture is enough to move the cell off the screen (up or down).
             if swipeDistanceOnY > Constants.SwipeDistanceToTakeAction {
                 downAction()
             } else if swipeDistanceOnY < -Constants.SwipeDistanceToTakeAction {
@@ -76,24 +78,31 @@ class SwipingCarouselCollectionViewCell: UICollectionViewCell {
     }
     
    fileprivate func upAction() {
+        /* The maxUpperPoint will depend on deleteOnSwipeUp variable.
+           Under default behavior, 'false', the cell will go back to the original position.
+           If it's set to 'true' the cell will go down off the screen to be able to delete it throught its delegate. */
+        let maxUpperPoint: CGPoint = deleteOnSwipeUp ? CGPoint(x: originalPoint.x, y: 2 * frame.minY) : self.originalPoint
         UIView.animate(withDuration: Constants.SwipeImageAnimationDuration, animations: { () -> Void in
-            self.center = self.originalPoint //Move the card back to the original point.
+            self.center = maxUpperPoint //Move the cell to the maxUpperPoint.
             self.superview?.isUserInteractionEnabled = false //Deactivate the user interaction in the Superview (In this case will be in the collection view). To avoid scrolling during the animation.
             }, completion: { (completion) -> Void in
                 self.superview?.isUserInteractionEnabled = true // Re-activate the user interaction.
-                self.delegate?.cardSwipedUp(self) //Delegate the SwipeUp action and send the view with it.
+                self.delegate?.cellSwipedUp(self) //Delegate the SwipeUp action and send the view with it.
         })
         
     }
     
    fileprivate func downAction() {
-        let maxDownPoint: CGPoint = CGPoint(x: originalPoint.x, y: 2 * frame.maxY)
+        /* The maxDownPoint will depend on deleteOnSwipeDown variable.
+           Under default behavior, 'false', the cell will go back to the original position.
+           If it's set to 'true' the cell will go down off the screen to be able to delete it throught its delegate. */
+        let maxDownPoint: CGPoint = deleteOnSwipeDown ? CGPoint(x: originalPoint.x, y: 2 * frame.maxY) : self.originalPoint
         UIView.animate(withDuration: Constants.SwipeImageAnimationDuration, animations: { () -> Void in
-            self.center = maxDownPoint //Move the card down off the screen.
+            self.center = maxDownPoint //Move the cell to the maxDownPoint.
             self.superview?.isUserInteractionEnabled = false //Deactivate the user interaction in the Superview (In this case will be in the collection view). To avoid scrolling during the animation.
             }, completion: { (completion) -> Void in
                 self.superview?.isUserInteractionEnabled = true // Re-activate the user interaction.
-                self.delegate?.cardSwipedDown(self) //Delegate the SwipeDown action and send the view with it.
+                self.delegate?.cellSwipedDown(self) //Delegate the SwipeDown action and send the view with it.
         })
     }
 }

@@ -1,5 +1,5 @@
 //
-//  SwipingCarouselCollectionViewController.swift
+//  CardCollectionViewController.swift
 //  Swiping Carousel
 //
 //  Created by Pablo Paciello on 8/20/15.
@@ -8,14 +8,13 @@
 
 import UIKit
 
-let reuseIdentifier = "Card"
-
-class SwipingCarouselCollectionViewController: UICollectionViewController, SwipingCarouselCellDelegate{
+class CardCollectionViewController: UICollectionViewController, SwipingCarouselCellDelegate{
     
     // MARK: Model
     // Load allTheCards from SavedCards Class.
     fileprivate var allTheCards = Card.loadCards()
     fileprivate let segueIdentifier = "OpenChat"
+    fileprivate let reuseIdentifier = "Card"
     
     // MARK: UICollectionViewDataSource
 
@@ -31,12 +30,13 @@ class SwipingCarouselCollectionViewController: UICollectionViewController, Swipi
         // Configure the cell
         cell.populateWith(card: allTheCards[(indexPath as NSIndexPath).row])
         cell.delegate = self
+        cell.deleteOnSwipeDown = true
         return cell
     }
     
     // MARK: Conform to the CellCollectionView Delegate
     
-    func cardSwipedUp(_ cell: UICollectionViewCell) {
+    func cellSwipedUp(_ cell: UICollectionViewCell) {
         
         guard let cell = cell as? CardCollectionViewCell else { return }
         print("Swiped Up - Card to Like: \(cell.nameLabel.text)")
@@ -58,7 +58,7 @@ class SwipingCarouselCollectionViewController: UICollectionViewController, Swipi
         }
     }
     
-    func cardSwipedDown(_ cell: UICollectionViewCell) {
+    func cellSwipedDown(_ cell: UICollectionViewCell) {
         
         guard let cell = cell as? CardCollectionViewCell else { return }
         print("Swiped Down - Card to Delete: \(cell.nameLabel.text)")

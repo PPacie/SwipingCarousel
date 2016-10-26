@@ -9,8 +9,8 @@
         <!--Swiping Carousel-->
         <scene sceneID="6ra-H0-6Oz">
             <objects>
-                <collectionViewController extendedLayoutIncludesOpaqueBars="YES" id="802-gR-r46" customClass="SwipingCarouselCollectionViewController" customModule="Swiping_Carousel" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="exg-zA-eSt">
+                <collectionViewController extendedLayoutIncludesOpaqueBars="YES" id="802-gR-r46" customClass="CardCollectionViewController" customModule="Swiping_Carousel" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="exg-zA-eSt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewLayout key="collectionViewLayout" id="MYq-di-7ba" customClass="SwipingCarouselFlowLayout" customModule="Swiping_Carousel" customModuleProvider="target"/>

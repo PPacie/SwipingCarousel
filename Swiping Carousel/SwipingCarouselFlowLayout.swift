@@ -1,5 +1,5 @@
 //
-//  CardsViewFlowLayout.swift
+//  SwipingCarouselFlowLayout.swift
 //  Swiping Carousel
 //
 //  Created by Pablo Paciello on 8/20/15.
