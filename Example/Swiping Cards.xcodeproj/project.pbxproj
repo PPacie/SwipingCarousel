@@ -33,13 +33,13 @@
 
 /* Begin PBXFileReference section */
 		6702087A1B868F5400F1E4EF /* SwipingCarouselFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipingCarouselFlowLayout.swift; sourceTree = "<group>"; };
-		6742B9281B8613230030424E /* Swiping Carousel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swiping Carousel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6742B9281B8613230030424E /* Swiping Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swiping Cards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6742B92C1B8613230030424E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6742B92D1B8613230030424E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6742B9321B8613230030424E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6742B9341B8613230030424E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6742B9371B8613230030424E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		6742B93D1B8613230030424E /* Swiping CarouselTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swiping CarouselTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6742B93D1B8613230030424E /* Swiping CardsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swiping CardsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6742B9421B8613230030424E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6742B9431B8613230030424E /* Swiping_CarouselTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swiping_CarouselTests.swift; sourceTree = "<group>"; };
 		6742B94D1B8613E50030424E /* CardCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewController.swift; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 		6742B91F1B8613230030424E = {
 			isa = PBXGroup;
 			children = (
-				6742B92A1B8613230030424E /* Swiping Carousel */,
+				6742B92A1B8613230030424E /* Swiping Cards */,
 				6742B9401B8613230030424E /* Swiping CarouselTests */,
 				6742B9291B8613230030424E /* Products */,
 			);
@@ -97,13 +97,13 @@
 		6742B9291B8613230030424E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6742B9281B8613230030424E /* Swiping Carousel.app */,
-				6742B93D1B8613230030424E /* Swiping CarouselTests.xctest */,
+				6742B9281B8613230030424E /* Swiping Cards.app */,
+				6742B93D1B8613230030424E /* Swiping CardsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6742B92A1B8613230030424E /* Swiping Carousel */ = {
+		6742B92A1B8613230030424E /* Swiping Cards */ = {
 			isa = PBXGroup;
 			children = (
 				6745DB591B86AD5D00A12482 /* Model */,
@@ -112,6 +112,7 @@
 				674D1E1B1B8D7685004382D8 /* Layouts */,
 				6742B92B1B8613230030424E /* Supporting Files */,
 			);
+			name = "Swiping Cards";
 			path = "Swiping Carousel";
 			sourceTree = "<group>";
 		};
@@ -165,9 +166,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6742B9271B8613230030424E /* Swiping Carousel */ = {
+		6742B9271B8613230030424E /* Swiping Cards */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6742B9471B8613230030424E /* Build configuration list for PBXNativeTarget "Swiping Carousel" */;
+			buildConfigurationList = 6742B9471B8613230030424E /* Build configuration list for PBXNativeTarget "Swiping Cards" */;
 			buildPhases = (
 				6742B9241B8613230030424E /* Sources */,
 				6742B9251B8613230030424E /* Frameworks */,
@@ -177,14 +178,14 @@
 			);
 			dependencies = (
 			);
-			name = "Swiping Carousel";
+			name = "Swiping Cards";
 			productName = "Swiping Carousel";
-			productReference = 6742B9281B8613230030424E /* Swiping Carousel.app */;
+			productReference = 6742B9281B8613230030424E /* Swiping Cards.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6742B93C1B8613230030424E /* Swiping CarouselTests */ = {
+		6742B93C1B8613230030424E /* Swiping CardsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6742B94A1B8613230030424E /* Build configuration list for PBXNativeTarget "Swiping CarouselTests" */;
+			buildConfigurationList = 6742B94A1B8613230030424E /* Build configuration list for PBXNativeTarget "Swiping CardsTests" */;
 			buildPhases = (
 				6742B9391B8613230030424E /* Sources */,
 				6742B93A1B8613230030424E /* Frameworks */,
@@ -195,9 +196,9 @@
 			dependencies = (
 				6742B93F1B8613230030424E /* PBXTargetDependency */,
 			);
-			name = "Swiping CarouselTests";
+			name = "Swiping CardsTests";
 			productName = "Swiping CarouselTests";
-			productReference = 6742B93D1B8613230030424E /* Swiping CarouselTests.xctest */;
+			productReference = 6742B93D1B8613230030424E /* Swiping CardsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -221,7 +222,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6742B9231B8613230030424E /* Build configuration list for PBXProject "Swiping Carousel" */;
+			buildConfigurationList = 6742B9231B8613230030424E /* Build configuration list for PBXProject "Swiping Cards" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -234,8 +235,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6742B9271B8613230030424E /* Swiping Carousel */,
-				6742B93C1B8613230030424E /* Swiping CarouselTests */,
+				6742B9271B8613230030424E /* Swiping Cards */,
+				6742B93C1B8613230030424E /* Swiping CardsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -289,7 +290,7 @@
 /* Begin PBXTargetDependency section */
 		6742B93F1B8613230030424E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6742B9271B8613230030424E /* Swiping Carousel */;
+			target = 6742B9271B8613230030424E /* Swiping Cards */;
 			targetProxy = 6742B93E1B8613230030424E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -402,7 +403,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Swiping Carousel/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ppacie.Swiping-Carousel-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ppacie.Swiping-Cards-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -414,7 +415,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Swiping Carousel/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ppacie.Swiping-Carousel-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ppacie.Swiping-Cards-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -437,7 +438,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ppacie.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swiping Carousel.app/Swiping Carousel";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swiping Cards.app/Swiping Cards";
 			};
 			name = Debug;
 		};
@@ -454,14 +455,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ppacie.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swiping Carousel.app/Swiping Carousel";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swiping Cards.app/Swiping Cards";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6742B9231B8613230030424E /* Build configuration list for PBXProject "Swiping Carousel" */ = {
+		6742B9231B8613230030424E /* Build configuration list for PBXProject "Swiping Cards" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6742B9451B8613230030424E /* Debug */,
@@ -470,7 +471,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6742B9471B8613230030424E /* Build configuration list for PBXNativeTarget "Swiping Carousel" */ = {
+		6742B9471B8613230030424E /* Build configuration list for PBXNativeTarget "Swiping Cards" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6742B9481B8613230030424E /* Debug */,
@@ -479,7 +480,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6742B94A1B8613230030424E /* Build configuration list for PBXNativeTarget "Swiping CarouselTests" */ = {
+		6742B94A1B8613230030424E /* Build configuration list for PBXNativeTarget "Swiping CardsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6742B94B1B8613230030424E /* Debug */,

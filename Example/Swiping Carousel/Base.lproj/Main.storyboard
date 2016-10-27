@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4X5-Ve-P4z">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Swiping Carousel-->
+        <!--Swiping Cards-->
         <scene sceneID="6ra-H0-6Oz">
             <objects>
                 <collectionViewController extendedLayoutIncludesOpaqueBars="YES" id="802-gR-r46" customClass="CardCollectionViewController" customModule="Swiping_Carousel" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="exg-zA-eSt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewLayout key="collectionViewLayout" id="MYq-di-7ba" customClass="SwipingCarouselFlowLayout" customModule="Swiping_Carousel" customModuleProvider="target"/>
                         <containerView key="backgroundView" opaque="NO" contentMode="scaleToFill" id="EOx-C9-Kxz">
@@ -87,7 +86,7 @@
                             <outlet property="delegate" destination="802-gR-r46" id="MRz-zr-dUh"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Swiping Carousel" id="WWx-5Y-gec"/>
+                    <navigationItem key="navigationItem" title="Swiping Cards" id="WWx-5Y-gec"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o6A-cJ-53Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
