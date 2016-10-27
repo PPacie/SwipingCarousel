@@ -12,7 +12,6 @@ import SwipingCarousel
 class CardViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView! { didSet {
-        collectionView.dataSource = self
         collectionView.register(CardCollectionViewCell.nib, forCellWithReuseIdentifier: CardCollectionViewCell.reuseIdentifier)
         }
     }
@@ -22,28 +21,9 @@ class CardViewController: UIViewController {
     fileprivate var allTheCards = Card.loadCards()
     fileprivate let segueIdentifier = "OpenChat"
     
-    //MARK: Segue Navigation    
-    override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
-        
-        if identifier == segueIdentifier {
-            if let selectedRowIndex = collectionView?.indexPathsForSelectedItems?.last {
-                if let cell = collectionView?.cellForItem(at: selectedRowIndex) {
-                    //We check if the selected Card is the one in the middle to open the chat. If it's not, we scroll to the side card selected.
-                    if cell.frame.size.height > cell.bounds.size.height {
-                        return true
-                    } else {
-                        collectionView?.scrollToItem(at: selectedRowIndex, at: UICollectionViewScrollPosition.centeredHorizontally, animated: true)
-                        return false
-                    }
-                }
-            }
-        }
-        return true
-    }
-
 }
     // MARK: UICollectionView DataSource
-extension CardViewController: UICollectionViewDataSource {
+extension CardViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //Return the number of items in the section
@@ -60,6 +40,19 @@ extension CardViewController: UICollectionViewDataSource {
         cell.deleteOnSwipeDown = true
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if let cell = collectionView.cellForItem(at: indexPath) {
+            //We check if the selected Card is the one in the middle to open the chat. If it's not, we scroll to the selected side card.
+            if cell.frame.size.height > cell.bounds.size.height {
+                performSegue(withIdentifier: segueIdentifier, sender: Any?.self)
+            } else {
+                collectionView.scrollToItem(at: indexPath, at: UICollectionViewScrollPosition.centeredHorizontally, animated: true)
+            }
+        }
+    }
+
 }
     // MARK: Conform to the SwipingCarousel Delegate
 extension CardViewController: SwipingCarouselCellDelegate {
@@ -67,7 +60,7 @@ extension CardViewController: SwipingCarouselCellDelegate {
     func cellSwipedUp(_ cell: UICollectionViewCell) {
         
         guard let cell = cell as? CardCollectionViewCell else { return }
-        print("Swiped Up - Card to Like: \(cell.nameLabel.text!)")
+        print("Swiped Up - Card to Like/Dislike: \(cell.nameLabel.text!)")
         //Get the IndexPath from Cell being passed (swiped up).
         if let indexPath = collectionView?.indexPath(for: cell) {
             //Change the Like status to Like/Dislike.
@@ -93,8 +86,11 @@ extension CardViewController: SwipingCarouselCellDelegate {
         if let indexPath = collectionView?.indexPath(for: cell) { //Get the IndexPath from Cell being passed (swiped down).
             var indexPaths = [IndexPath]()
             indexPaths.append(indexPath)
-            allTheCards.remove(at: (indexPath as NSIndexPath).row)                //Delete the swiped card from the Model.
-            collectionView?.deleteItems(at: indexPaths)     //Delete the swiped card from CollectionView.
+            //Delete the swiped card from the Model.
+            allTheCards.remove(at: (indexPath as NSIndexPath).row)
+            //Delete the swiped card from CollectionView.
+            collectionView?.deleteItems(at: indexPaths)
+            //Delete cell from View.
             cell.removeFromSuperview()
         }
     }
