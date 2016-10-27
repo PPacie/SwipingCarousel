@@ -38,28 +38,28 @@ class SwipingCarouselFlowLayout:  UICollectionViewFlowLayout {
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         
         let array = super.layoutAttributesForElements(in: rect)
+        var attributesCopy = [UICollectionViewLayoutAttributes]()
         
         var visibleRect = CGRect()
         visibleRect.origin = collectionView!.contentOffset
         visibleRect.size = collectionView!.bounds.size
         
-        for attributes in array! {
-            let newAttributes: UICollectionViewLayoutAttributes = attributes 
-            if attributes.frame.intersects(rect) {
-                let distance = visibleRect.midX - attributes.center.x
+        for itemAttributes in array! {
+            //let newAttributes: UICollectionViewLayoutAttributes = itemAttributes
+            let itemAttributesCopy = itemAttributes.copy() as! UICollectionViewLayoutAttributes
+            if itemAttributesCopy.frame.intersects(rect) {
+                let distance = visibleRect.midX - itemAttributes.center.x
                 let normalizedDistance = distance / Constants.activeDistance
                 if (abs(distance)) < Constants.activeDistance {
                     let zoom = 1 + Constants.zoomFactor*(1 - abs(normalizedDistance))
-                    newAttributes.transform3D = CATransform3DMakeScale(zoom, zoom, 1.0)
-                    newAttributes.zIndex = 1
+                    itemAttributesCopy.transform3D = CATransform3DMakeScale(zoom, zoom, 1.0)
+                    itemAttributesCopy.zIndex = 1
                 }
             }
+            attributesCopy.append(itemAttributesCopy)
         }
-        
-        return array
-
+        return attributesCopy
     }
-
     
     //Focus the zoom in the middle Card.
     override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
