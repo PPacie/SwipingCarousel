@@ -1,6 +1,6 @@
 //
 //  Extensions.swift
-//  Swiping Carousel
+//  Swiping Cards
 //
 //  Created by Pablo Paciello on 10/26/16.
 //  Copyright © 2016 Pablo Paciello. All rights reserved.

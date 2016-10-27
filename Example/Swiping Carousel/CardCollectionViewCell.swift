@@ -1,6 +1,6 @@
 //
 //  CardCollectionViewCell.swift
-//  Swiping Carousel
+//  Swiping Cards
 //
 //  Created by Pablo Paciello on 8/20/15.
 //  Copyright (c) 2015 Pablo Paciello. All rights reserved.
