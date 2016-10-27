@@ -71,7 +71,7 @@ public var deleteOnSwipeUp = false
 Indicates weather to remove the SwipingCarouselCell cell from view or to get it back to the original position when swiping up. Default behavior is to get back to original position.
 
 ## Example
-Check the *ExampleProject* folder to see an example of how it works.
+Check the *ExampleProject* folder to see how it works.
 
 ## Can I customize the Layout?
 Sure, you are able to customize the layout by overriding the `UICollectionViewDelegateFlowLayout` methods you desire.
