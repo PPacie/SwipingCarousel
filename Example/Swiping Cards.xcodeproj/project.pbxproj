@@ -16,8 +16,6 @@
 		6742B9501B861A930030424E /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6742B94F1B861A930030424E /* CardCollectionViewCell.swift */; };
 		6745DB5B1B86C78100A12482 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6745DB5A1B86C78100A12482 /* Card.swift */; };
 		674CF6E81B8BDE1000084EB0 /* Cards.plist in Resources */ = {isa = PBXBuildFile; fileRef = 674CF6E71B8BDE1000084EB0 /* Cards.plist */; };
-		67B016951DC20CCB006EF53E /* SwipingCarousel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B016921DC20C64006EF53E /* SwipingCarousel.framework */; };
-		67B016961DC20CCB006EF53E /* SwipingCarousel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67B016921DC20C64006EF53E /* SwipingCarousel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		67F1DB0D1DC0F684009BCE5C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F1DB0C1DC0F684009BCE5C /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,27 +27,6 @@
 			remoteGlobalIDString = 6742B9271B8613230030424E;
 			remoteInfo = "Swiping Carousel";
 		};
-		67B016911DC20C64006EF53E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 67B0168C1DC20C64006EF53E /* SwipingCarousel.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 67B0166E1DC2041F006EF53E;
-			remoteInfo = SwipingCarousel;
-		};
-		67B016931DC20C64006EF53E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 67B0168C1DC20C64006EF53E /* SwipingCarousel.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 67B016771DC2041F006EF53E;
-			remoteInfo = SwipingCarouselTests;
-		};
-		67B016971DC20CCB006EF53E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 67B0168C1DC20C64006EF53E /* SwipingCarousel.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 67B0166D1DC2041F006EF53E;
-			remoteInfo = SwipingCarousel;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -59,7 +36,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				67B016961DC20CCB006EF53E /* SwipingCarousel.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,7 +56,6 @@
 		6742B94F1B861A930030424E /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		6745DB5A1B86C78100A12482 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		674CF6E71B8BDE1000084EB0 /* Cards.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Cards.plist; sourceTree = "<group>"; };
-		67B0168C1DC20C64006EF53E /* SwipingCarousel.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwipingCarousel.xcodeproj; path = "../Swiping Carousel/SwipingCarousel.xcodeproj"; sourceTree = "<group>"; };
 		67F1DB0C1DC0F684009BCE5C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,7 +64,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67B016951DC20CCB006EF53E /* SwipingCarousel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +96,6 @@
 		6742B91F1B8613230030424E = {
 			isa = PBXGroup;
 			children = (
-				67B0168C1DC20C64006EF53E /* SwipingCarousel.xcodeproj */,
 				6742B92A1B8613230030424E /* Swiping Cards */,
 				6742B9401B8613230030424E /* Swiping CardsTests */,
 				6742B9291B8613230030424E /* Products */,
@@ -190,15 +163,6 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		67B0168D1DC20C64006EF53E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				67B016921DC20C64006EF53E /* SwipingCarousel.framework */,
-				67B016941DC20C64006EF53E /* SwipingCarouselTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -214,7 +178,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				67B016981DC20CCB006EF53E /* PBXTargetDependency */,
 			);
 			name = "Swiping Cards";
 			productName = "Swiping Carousel";
@@ -271,12 +234,6 @@
 			mainGroup = 6742B91F1B8613230030424E;
 			productRefGroup = 6742B9291B8613230030424E /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 67B0168D1DC20C64006EF53E /* Products */;
-					ProjectRef = 67B0168C1DC20C64006EF53E /* SwipingCarousel.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				6742B9271B8613230030424E /* Swiping Cards */,
@@ -284,23 +241,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		67B016921DC20C64006EF53E /* SwipingCarousel.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SwipingCarousel.framework;
-			remoteRef = 67B016911DC20C64006EF53E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		67B016941DC20C64006EF53E /* SwipingCarouselTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SwipingCarouselTests.xctest;
-			remoteRef = 67B016931DC20C64006EF53E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6742B9261B8613230030424E /* Resources */ = {
@@ -351,11 +291,6 @@
 			isa = PBXTargetDependency;
 			target = 6742B9271B8613230030424E /* Swiping Cards */;
 			targetProxy = 6742B93E1B8613230030424E /* PBXContainerItemProxy */;
-		};
-		67B016981DC20CCB006EF53E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwipingCarousel;
-			targetProxy = 67B016971DC20CCB006EF53E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
