@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4X5-Ve-P4z">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -8,11 +9,11 @@
         <!--Swiping Cards-->
         <scene sceneID="6ra-H0-6Oz">
             <objects>
-                <collectionViewController extendedLayoutIncludesOpaqueBars="YES" id="802-gR-r46" customClass="CardCollectionViewController" customModule="Swiping_Carousel" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="exg-zA-eSt">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                <collectionViewController extendedLayoutIncludesOpaqueBars="YES" id="802-gR-r46" customClass="CardCollectionViewController" customModule="Swiping_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="exg-zA-eSt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewLayout key="collectionViewLayout" id="MYq-di-7ba" customClass="SwipingCarouselFlowLayout" customModule="Swiping_Carousel" customModuleProvider="target"/>
+                        <collectionViewLayout key="collectionViewLayout" id="MYq-di-7ba" customClass="SwipingCarouselFlowLayout" customModule="SwipingCarousel"/>
                         <containerView key="backgroundView" opaque="NO" contentMode="scaleToFill" id="EOx-C9-Kxz">
                             <rect key="frame" x="0.0" y="-64" width="375" height="667"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -21,7 +22,7 @@
                             </connections>
                         </containerView>
                         <cells>
-                            <collectionViewCell multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Card" id="Alz-sX-f71" customClass="CardCollectionViewCell" customModule="Swiping_Carousel" customModuleProvider="target">
+                            <collectionViewCell multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Card" id="Alz-sX-f71" customClass="CardCollectionViewCell" customModule="Swiping_Cards" customModuleProvider="target">
                                 <rect key="frame" x="83" y="0.0" width="210" height="278"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">

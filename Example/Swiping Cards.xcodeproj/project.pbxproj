@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6702087B1B868F5400F1E4EF /* SwipingCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6702087A1B868F5400F1E4EF /* SwipingCarouselFlowLayout.swift */; };
 		6742B92E1B8613230030424E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6742B92D1B8613230030424E /* AppDelegate.swift */; };
 		6742B9331B8613230030424E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6742B9311B8613230030424E /* Main.storyboard */; };
 		6742B9351B8613230030424E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6742B9341B8613230030424E /* Images.xcassets */; };
@@ -17,8 +16,9 @@
 		6742B9501B861A930030424E /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6742B94F1B861A930030424E /* CardCollectionViewCell.swift */; };
 		6745DB5B1B86C78100A12482 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6745DB5A1B86C78100A12482 /* Card.swift */; };
 		674CF6E81B8BDE1000084EB0 /* Cards.plist in Resources */ = {isa = PBXBuildFile; fileRef = 674CF6E71B8BDE1000084EB0 /* Cards.plist */; };
+		67B016951DC20CCB006EF53E /* SwipingCarousel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B016921DC20C64006EF53E /* SwipingCarousel.framework */; };
+		67B016961DC20CCB006EF53E /* SwipingCarousel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67B016921DC20C64006EF53E /* SwipingCarousel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		67F1DB0D1DC0F684009BCE5C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F1DB0C1DC0F684009BCE5C /* Extensions.swift */; };
-		67F1DB131DC123CB009BCE5C /* SwipingCarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F1DB121DC123CB009BCE5C /* SwipingCarouselCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,10 +29,44 @@
 			remoteGlobalIDString = 6742B9271B8613230030424E;
 			remoteInfo = "Swiping Carousel";
 		};
+		67B016911DC20C64006EF53E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B0168C1DC20C64006EF53E /* SwipingCarousel.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 67B0166E1DC2041F006EF53E;
+			remoteInfo = SwipingCarousel;
+		};
+		67B016931DC20C64006EF53E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B0168C1DC20C64006EF53E /* SwipingCarousel.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 67B016771DC2041F006EF53E;
+			remoteInfo = SwipingCarouselTests;
+		};
+		67B016971DC20CCB006EF53E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B0168C1DC20C64006EF53E /* SwipingCarousel.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 67B0166D1DC2041F006EF53E;
+			remoteInfo = SwipingCarousel;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		67B016991DC20CCB006EF53E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				67B016961DC20CCB006EF53E /* SwipingCarousel.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		6702087A1B868F5400F1E4EF /* SwipingCarouselFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipingCarouselFlowLayout.swift; sourceTree = "<group>"; };
 		6742B9281B8613230030424E /* Swiping Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swiping Cards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6742B92C1B8613230030424E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6742B92D1B8613230030424E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,8 +80,8 @@
 		6742B94F1B861A930030424E /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		6745DB5A1B86C78100A12482 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		674CF6E71B8BDE1000084EB0 /* Cards.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Cards.plist; sourceTree = "<group>"; };
+		67B0168C1DC20C64006EF53E /* SwipingCarousel.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwipingCarousel.xcodeproj; path = "../Swiping Carousel/SwipingCarousel.xcodeproj"; sourceTree = "<group>"; };
 		67F1DB0C1DC0F684009BCE5C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		67F1DB121DC123CB009BCE5C /* SwipingCarouselCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipingCarouselCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67B016951DC20CCB006EF53E /* SwipingCarousel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				6742B94F1B861A930030424E /* CardCollectionViewCell.swift */,
-				67F1DB121DC123CB009BCE5C /* SwipingCarouselCollectionViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -88,6 +122,7 @@
 		6742B91F1B8613230030424E = {
 			isa = PBXGroup;
 			children = (
+				67B0168C1DC20C64006EF53E /* SwipingCarousel.xcodeproj */,
 				6742B92A1B8613230030424E /* Swiping Cards */,
 				6742B9401B8613230030424E /* Swiping CardsTests */,
 				6742B9291B8613230030424E /* Products */,
@@ -109,7 +144,6 @@
 				6745DB591B86AD5D00A12482 /* Model */,
 				670208791B868F0300F1E4EF /* Views */,
 				6702087C1B868FD600F1E4EF /* Controllers */,
-				674D1E1B1B8D7685004382D8 /* Layouts */,
 				6742B92B1B8613230030424E /* Supporting Files */,
 			);
 			name = "Swiping Cards";
@@ -156,12 +190,13 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		674D1E1B1B8D7685004382D8 /* Layouts */ = {
+		67B0168D1DC20C64006EF53E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6702087A1B868F5400F1E4EF /* SwipingCarouselFlowLayout.swift */,
+				67B016921DC20C64006EF53E /* SwipingCarousel.framework */,
+				67B016941DC20C64006EF53E /* SwipingCarouselTests.xctest */,
 			);
-			name = Layouts;
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,10 +209,12 @@
 				6742B9241B8613230030424E /* Sources */,
 				6742B9251B8613230030424E /* Frameworks */,
 				6742B9261B8613230030424E /* Resources */,
+				67B016991DC20CCB006EF53E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				67B016981DC20CCB006EF53E /* PBXTargetDependency */,
 			);
 			name = "Swiping Cards";
 			productName = "Swiping Carousel";
@@ -209,7 +246,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Pablo Paciello";
 				TargetAttributes = {
 					6742B9271B8613230030424E = {
@@ -234,6 +271,12 @@
 			mainGroup = 6742B91F1B8613230030424E;
 			productRefGroup = 6742B9291B8613230030424E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 67B0168D1DC20C64006EF53E /* Products */;
+					ProjectRef = 67B0168C1DC20C64006EF53E /* SwipingCarousel.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				6742B9271B8613230030424E /* Swiping Cards */,
@@ -241,6 +284,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		67B016921DC20C64006EF53E /* SwipingCarousel.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwipingCarousel.framework;
+			remoteRef = 67B016911DC20C64006EF53E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		67B016941DC20C64006EF53E /* SwipingCarouselTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwipingCarouselTests.xctest;
+			remoteRef = 67B016931DC20C64006EF53E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6742B9261B8613230030424E /* Resources */ = {
@@ -268,11 +328,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67F1DB131DC123CB009BCE5C /* SwipingCarouselCollectionViewCell.swift in Sources */,
 				6742B94E1B8613E50030424E /* CardCollectionViewController.swift in Sources */,
 				67F1DB0D1DC0F684009BCE5C /* Extensions.swift in Sources */,
 				6742B9501B861A930030424E /* CardCollectionViewCell.swift in Sources */,
-				6702087B1B868F5400F1E4EF /* SwipingCarouselFlowLayout.swift in Sources */,
 				6745DB5B1B86C78100A12482 /* Card.swift in Sources */,
 				6742B92E1B8613230030424E /* AppDelegate.swift in Sources */,
 			);
@@ -293,6 +351,11 @@
 			isa = PBXTargetDependency;
 			target = 6742B9271B8613230030424E /* Swiping Cards */;
 			targetProxy = 6742B93E1B8613230030424E /* PBXContainerItemProxy */;
+		};
+		67B016981DC20CCB006EF53E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwipingCarousel;
+			targetProxy = 67B016971DC20CCB006EF53E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -329,8 +392,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -374,8 +439,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -394,6 +461,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -401,6 +469,7 @@
 		6742B9481B8613230030424E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Swiping Carousel/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -413,6 +482,7 @@
 		6742B9491B8613230030424E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Swiping Carousel/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

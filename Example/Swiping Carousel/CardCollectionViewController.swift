@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwipingCarousel
 
 class CardCollectionViewController: UICollectionViewController, SwipingCarouselCellDelegate{
     

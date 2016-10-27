@@ -9,18 +9,18 @@
 import UIKit
 
 //Protocol to inform the delegate of a SwipingCarouselCell that cell is being swiped up or down.
-protocol SwipingCarouselCellDelegate : class {
+public protocol SwipingCarouselCellDelegate : class {
     func cellSwipedUp(_ cell: UICollectionViewCell)
     func cellSwipedDown(_ cell: UICollectionViewCell)
 }
 
-class SwipingCarouselCollectionViewCell: UICollectionViewCell {
+open class SwipingCarouselCollectionViewCell: UICollectionViewCell {
     
-    weak var delegate: SwipingCarouselCellDelegate?
-    var deleteOnSwipeUp = false
-    var deleteOnSwipeDown = false
+    public weak var delegate: SwipingCarouselCellDelegate?
+    public var deleteOnSwipeUp = false
+    public var deleteOnSwipeDown = false
     
-    required init(coder: NSCoder) {
+    public required init(coder: NSCoder) {
         super.init(coder: coder)!
         
         // Add Gesture to Cell
