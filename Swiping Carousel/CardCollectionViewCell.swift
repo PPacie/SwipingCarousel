@@ -17,16 +17,15 @@ class CardCollectionViewCell: SwipingCarouselCollectionViewCell {
     @IBOutlet weak var activityLabel: UILabel!
     @IBOutlet weak var likeImage: UIImageView!
     
-    
     required init(coder: NSCoder) {
         super.init(coder: coder)
     
         // Cell Corner and Shadows
-        self.layer.cornerRadius = 10
-        self.layer.shadowRadius = 5
-        self.layer.shadowOpacity = 0.6
+        layer.cornerRadius = 10
+        layer.shadowRadius = 5
+        layer.shadowOpacity = 0.6
         // Emphasize the shadow on the bottom and right sides of the cell
-        self.layer.shadowOffset = CGSize(width: 4, height: 4)
+        layer.shadowOffset = CGSize(width: 4, height: 4)
     }
     
     func populateWith(card: Card) {
