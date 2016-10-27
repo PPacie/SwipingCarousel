@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "67B0166D1DC2041F006EF53E"
-               BuildableName = "Swiping Carousel.framework"
-               BlueprintName = "Swiping Carousel"
-               ReferencedContainer = "container:Swiping Carousel.xcodeproj">
+               BuildableName = "SwipingCarousel.framework"
+               BlueprintName = "SwipingCarousel"
+               ReferencedContainer = "container:SwipingCarousel.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "67B016761DC2041F006EF53E"
-               BuildableName = "Swiping CarouselTests.xctest"
-               BlueprintName = "Swiping CarouselTests"
-               ReferencedContainer = "container:Swiping Carousel.xcodeproj">
+               BuildableName = "SwipingCarouselTests.xctest"
+               BlueprintName = "SwipingCarouselTests"
+               ReferencedContainer = "container:SwipingCarousel.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "67B0166D1DC2041F006EF53E"
-            BuildableName = "Swiping Carousel.framework"
-            BlueprintName = "Swiping Carousel"
-            ReferencedContainer = "container:Swiping Carousel.xcodeproj">
+            BuildableName = "SwipingCarousel.framework"
+            BlueprintName = "SwipingCarousel"
+            ReferencedContainer = "container:SwipingCarousel.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "67B0166D1DC2041F006EF53E"
-            BuildableName = "Swiping Carousel.framework"
-            BlueprintName = "Swiping Carousel"
-            ReferencedContainer = "container:Swiping Carousel.xcodeproj">
+            BuildableName = "SwipingCarousel.framework"
+            BlueprintName = "SwipingCarousel"
+            ReferencedContainer = "container:SwipingCarousel.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -83,9 +83,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "67B0166D1DC2041F006EF53E"
-            BuildableName = "Swiping Carousel.framework"
-            BlueprintName = "Swiping Carousel"
-            ReferencedContainer = "container:Swiping Carousel.xcodeproj">
+            BuildableName = "SwipingCarousel.framework"
+            BlueprintName = "SwipingCarousel"
+            ReferencedContainer = "container:SwipingCarousel.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
