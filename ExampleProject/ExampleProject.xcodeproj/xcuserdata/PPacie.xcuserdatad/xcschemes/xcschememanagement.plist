@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Swiping Carousel.xcscheme_^#shared#^_</key>
+		<key>ExampleProject.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>67B0166D1DC2041F006EF53E</key>
+		<key>67B016A21DC21CEC006EF53E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>67B016761DC2041F006EF53E</key>
+		<key>67B016B61DC21CEC006EF53E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
