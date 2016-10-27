@@ -12,7 +12,7 @@
 		6742B9331B8613230030424E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6742B9311B8613230030424E /* Main.storyboard */; };
 		6742B9351B8613230030424E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6742B9341B8613230030424E /* Images.xcassets */; };
 		6742B9381B8613230030424E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6742B9361B8613230030424E /* LaunchScreen.xib */; };
-		6742B9441B8613230030424E /* Swiping_CarouselTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6742B9431B8613230030424E /* Swiping_CarouselTests.swift */; };
+		6742B9441B8613230030424E /* Swiping_CardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6742B9431B8613230030424E /* Swiping_CardsTests.swift */; };
 		6742B94E1B8613E50030424E /* CardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6742B94D1B8613E50030424E /* CardCollectionViewController.swift */; };
 		6742B9501B861A930030424E /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6742B94F1B861A930030424E /* CardCollectionViewCell.swift */; };
 		6745DB5B1B86C78100A12482 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6745DB5A1B86C78100A12482 /* Card.swift */; };
@@ -41,7 +41,7 @@
 		6742B9371B8613230030424E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		6742B93D1B8613230030424E /* Swiping CardsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swiping CardsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6742B9421B8613230030424E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6742B9431B8613230030424E /* Swiping_CarouselTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swiping_CarouselTests.swift; sourceTree = "<group>"; };
+		6742B9431B8613230030424E /* Swiping_CardsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swiping_CardsTests.swift; sourceTree = "<group>"; };
 		6742B94D1B8613E50030424E /* CardCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewController.swift; sourceTree = "<group>"; };
 		6742B94F1B861A930030424E /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		6745DB5A1B86C78100A12482 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				6742B92A1B8613230030424E /* Swiping Cards */,
-				6742B9401B8613230030424E /* Swiping CarouselTests */,
+				6742B9401B8613230030424E /* Swiping CardsTests */,
 				6742B9291B8613230030424E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -130,12 +130,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		6742B9401B8613230030424E /* Swiping CarouselTests */ = {
+		6742B9401B8613230030424E /* Swiping CardsTests */ = {
 			isa = PBXGroup;
 			children = (
-				6742B9431B8613230030424E /* Swiping_CarouselTests.swift */,
+				6742B9431B8613230030424E /* Swiping_CardsTests.swift */,
 				6742B9411B8613230030424E /* Supporting Files */,
 			);
+			name = "Swiping CardsTests";
 			path = "Swiping CarouselTests";
 			sourceTree = "<group>";
 		};
@@ -281,7 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6742B9441B8613230030424E /* Swiping_CarouselTests.swift in Sources */,
+				6742B9441B8613230030424E /* Swiping_CardsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

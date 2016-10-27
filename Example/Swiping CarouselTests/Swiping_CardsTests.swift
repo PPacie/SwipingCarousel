@@ -1,6 +1,6 @@
 //
-//  Swiping_CarouselTests.swift
-//  Swiping CarouselTests
+//  Swiping_CardsTests.swift
+//  Swiping CardsTests
 //
 //  Created by Pablo Paciello on 8/20/15.
 //  Copyright (c) 2015 Pablo Paciello. All rights reserved.
@@ -9,7 +9,7 @@
 import UIKit
 import XCTest
 
-class Swiping_CarouselTests: XCTestCase {
+class Swiping_CardsTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
