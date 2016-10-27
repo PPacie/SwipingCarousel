@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SwipingCarouselFlowLayout:  UICollectionViewFlowLayout {
+public class SwipingCarouselFlowLayout:  UICollectionViewFlowLayout {
     
     // Mark: Constants 
     fileprivate struct Constants {
@@ -20,7 +20,7 @@ class SwipingCarouselFlowLayout:  UICollectionViewFlowLayout {
         
     }
     
-    override func prepare() {
+    override public func prepare() {
         super.prepare()
         
         itemSize = CGSize(width: Constants.itemWidth, height: Constants.itemHeight)
@@ -35,7 +35,7 @@ class SwipingCarouselFlowLayout:  UICollectionViewFlowLayout {
 
     // Here is where the magic happens
     // Add zooming to the Layout Attributes.
-    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+    override public func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         
         let array = super.layoutAttributesForElements(in: rect)
         var attributesCopy = [UICollectionViewLayoutAttributes]()
@@ -62,7 +62,7 @@ class SwipingCarouselFlowLayout:  UICollectionViewFlowLayout {
     }
     
     //Focus the zoom in the middle Card.
-    override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
+    override public func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
                
         var offsetAdjustment:CGFloat = CGFloat(MAXFLOAT)
         let horizontalCenter = proposedContentOffset.x + (collectionView!.bounds.width / 2.0)
@@ -83,7 +83,7 @@ class SwipingCarouselFlowLayout:  UICollectionViewFlowLayout {
     
     
     // Invalidate the Layout when the user is scrolling
-    override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
+    override public func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
         return true
     }
 
