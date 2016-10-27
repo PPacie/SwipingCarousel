@@ -55,7 +55,7 @@ extension CardViewController: UICollectionViewDataSource, UICollectionViewDelega
 
 }
     // MARK: Conform to the SwipingCarousel Delegate
-extension CardViewController: SwipingCarouselCellDelegate {
+extension CardViewController: SwipingCarouselDelegate {
     
     func cellSwipedUp(_ cell: UICollectionViewCell) {
         
