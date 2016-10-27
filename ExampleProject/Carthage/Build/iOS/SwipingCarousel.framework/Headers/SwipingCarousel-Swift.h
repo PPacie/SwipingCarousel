@@ -126,4 +126,16 @@ SWIFT_CLASS("_TtC15SwipingCarousel33SwipingCarouselCollectionViewCell")
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
+@class UICollectionViewLayoutAttributes;
+
+SWIFT_CLASS("_TtC15SwipingCarousel25SwipingCarouselFlowLayout")
+@interface SwipingCarouselFlowLayout : UICollectionViewFlowLayout
+- (void)prepareLayout;
+- (NSArray<UICollectionViewLayoutAttributes *> * _Nullable)layoutAttributesForElementsInRect:(CGRect)rect;
+- (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity;
+- (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 #pragma clang diagnostic pop
