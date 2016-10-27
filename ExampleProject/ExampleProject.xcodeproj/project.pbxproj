@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		670501EA1DC2CA080057DC00 /* SwipingCarousel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 670501E91DC2CA080057DC00 /* SwipingCarousel.framework */; };
 		67B016A71DC21CEC006EF53E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B016A61DC21CEC006EF53E /* AppDelegate.swift */; };
 		67B016A91DC21CEC006EF53E /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B016A81DC21CEC006EF53E /* CardViewController.swift */; };
 		67B016AC1DC21CEC006EF53E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67B016AA1DC21CEC006EF53E /* Main.storyboard */; };
 		67B016AE1DC21CEC006EF53E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67B016AD1DC21CEC006EF53E /* Assets.xcassets */; };
 		67B016B11DC21CEC006EF53E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67B016AF1DC21CEC006EF53E /* LaunchScreen.storyboard */; };
 		67B016BC1DC21CEC006EF53E /* ExampleProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B016BB1DC21CEC006EF53E /* ExampleProjectTests.swift */; };
-		67B016C81DC2420D006EF53E /* SwipingCarousel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B016C71DC2420D006EF53E /* SwipingCarousel.framework */; };
 		67B016CE1DC2434C006EF53E /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B016CD1DC2434C006EF53E /* Card.swift */; };
 		67B016D31DC243FA006EF53E /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B016D11DC243FA006EF53E /* CardCollectionViewCell.swift */; };
 		67B016D41DC243FA006EF53E /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67B016D21DC243FA006EF53E /* CardCollectionViewCell.xib */; };
@@ -32,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		670501E91DC2CA080057DC00 /* SwipingCarousel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwipingCarousel.framework; path = Carthage/Build/iOS/SwipingCarousel.framework; sourceTree = "<group>"; };
 		67B016A31DC21CEC006EF53E /* ExampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67B016A61DC21CEC006EF53E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67B016A81DC21CEC006EF53E /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
@@ -42,7 +43,6 @@
 		67B016B71DC21CEC006EF53E /* ExampleProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67B016BB1DC21CEC006EF53E /* ExampleProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleProjectTests.swift; sourceTree = "<group>"; };
 		67B016BD1DC21CEC006EF53E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		67B016C71DC2420D006EF53E /* SwipingCarousel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwipingCarousel.framework; path = Carthage/Build/iOS/SwipingCarousel.framework; sourceTree = "<group>"; };
 		67B016CD1DC2434C006EF53E /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		67B016D11DC243FA006EF53E /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		67B016D21DC243FA006EF53E /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67B016C81DC2420D006EF53E /* SwipingCarousel.framework in Frameworks */,
+				670501EA1DC2CA080057DC00 /* SwipingCarousel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +112,7 @@
 		67B016C61DC2420D006EF53E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				67B016C71DC2420D006EF53E /* SwipingCarousel.framework */,
+				670501E91DC2CA080057DC00 /* SwipingCarousel.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -504,6 +504,7 @@
 				67B016C21DC21CEC006EF53E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		67B016C31DC21CEC006EF53E /* Build configuration list for PBXNativeTarget "ExampleProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +513,7 @@
 				67B016C51DC21CEC006EF53E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
