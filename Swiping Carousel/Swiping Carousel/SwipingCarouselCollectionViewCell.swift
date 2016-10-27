@@ -8,15 +8,15 @@
 
 import UIKit
 
-//Protocol to inform the delegate of a SwipingCarouselCell that cell is being swiped up or down.
-public protocol SwipingCarouselCellDelegate : class {
+//Protocol to inform that cell is being swiped up or down.
+public protocol SwipingCarouselDelegate : class {
     func cellSwipedUp(_ cell: UICollectionViewCell)
     func cellSwipedDown(_ cell: UICollectionViewCell)
 }
 
 open class SwipingCarouselCollectionViewCell: UICollectionViewCell {
     
-    public weak var delegate: SwipingCarouselCellDelegate?
+    public weak var delegate: SwipingCarouselDelegate?
     public var deleteOnSwipeUp = false
     public var deleteOnSwipeDown = false
     
@@ -66,15 +66,13 @@ open class SwipingCarouselCollectionViewCell: UICollectionViewCell {
             } else {
                 UIView.animate(withDuration: Constants.CenterImageAnimationDuration, animations: {
                     self.center = self.originalPoint
-                })
-                
+                })                
             }
         } else {
             UIView.animate(withDuration: Constants.CenterImageAnimationDuration, animations: {
                 self.center = self.originalPoint
             })
         }
-        
     }
     
    fileprivate func upAction() {
@@ -89,7 +87,6 @@ open class SwipingCarouselCollectionViewCell: UICollectionViewCell {
                 self.superview?.isUserInteractionEnabled = true // Re-activate the user interaction.
                 self.delegate?.cellSwipedUp(self) //Delegate the SwipeUp action and send the view with it.
         })
-        
     }
     
    fileprivate func downAction() {

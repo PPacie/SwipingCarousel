@@ -17,7 +17,6 @@ public class SwipingCarouselFlowLayout:  UICollectionViewFlowLayout {
         static let itemWidth: CGFloat = 210       //Width of the Cell.
         static let itemHeight: CGFloat = 278      //Height of the Cell.
         static let minLineSpacing: CGFloat = 50.0
-        
     }
     
     override public func prepare() {
@@ -30,7 +29,6 @@ public class SwipingCarouselFlowLayout:  UICollectionViewFlowLayout {
         //60 - will let the first and last card of the CollectionView to be centered.
         //100 - will avoid the double rows in the CollectionView
         sectionInset = UIEdgeInsetsMake(100.0, 60.0, 100, 60.0)
-        
     }
 
     // Here is where the magic happens
@@ -77,14 +75,11 @@ public class SwipingCarouselFlowLayout:  UICollectionViewFlowLayout {
                 }
             }
         }
-        
         return CGPoint(x: proposedContentOffset.x + offsetAdjustment, y: proposedContentOffset.y)
     }
-    
     
     // Invalidate the Layout when the user is scrolling
     override public func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
         return true
     }
-
 }
