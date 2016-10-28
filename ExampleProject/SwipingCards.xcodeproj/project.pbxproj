@@ -33,14 +33,14 @@
 
 /* Begin PBXFileReference section */
 		670501E91DC2CA080057DC00 /* SwipingCarousel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwipingCarousel.framework; path = Carthage/Build/iOS/SwipingCarousel.framework; sourceTree = "<group>"; };
-		67B016A31DC21CEC006EF53E /* ExampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		67B016A31DC21CEC006EF53E /* SwipingCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipingCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67B016A61DC21CEC006EF53E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67B016A81DC21CEC006EF53E /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		67B016AB1DC21CEC006EF53E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		67B016AD1DC21CEC006EF53E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67B016B01DC21CEC006EF53E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67B016B21DC21CEC006EF53E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		67B016B71DC21CEC006EF53E /* ExampleProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		67B016B71DC21CEC006EF53E /* SwipingCardsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwipingCardsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67B016BB1DC21CEC006EF53E /* ExampleProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleProjectTests.swift; sourceTree = "<group>"; };
 		67B016BD1DC21CEC006EF53E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67B016CD1DC2434C006EF53E /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 		67B0169A1DC21CEC006EF53E = {
 			isa = PBXGroup;
 			children = (
-				67B016A51DC21CEC006EF53E /* ExampleProject */,
+				67B016A51DC21CEC006EF53E /* SwipingCards */,
 				67B016BA1DC21CEC006EF53E /* ExampleProjectTests */,
 				67B016A41DC21CEC006EF53E /* Products */,
 				67B016C61DC2420D006EF53E /* Frameworks */,
@@ -82,13 +82,13 @@
 		67B016A41DC21CEC006EF53E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				67B016A31DC21CEC006EF53E /* ExampleProject.app */,
-				67B016B71DC21CEC006EF53E /* ExampleProjectTests.xctest */,
+				67B016A31DC21CEC006EF53E /* SwipingCards.app */,
+				67B016B71DC21CEC006EF53E /* SwipingCardsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		67B016A51DC21CEC006EF53E /* ExampleProject */ = {
+		67B016A51DC21CEC006EF53E /* SwipingCards */ = {
 			isa = PBXGroup;
 			children = (
 				67B016CA1DC24315006EF53E /* Model */,
@@ -97,6 +97,7 @@
 				67B016CF1DC2435C006EF53E /* Support Files */,
 				67B016D01DC24372006EF53E /* Storyboards */,
 			);
+			name = SwipingCards;
 			path = ExampleProject;
 			sourceTree = "<group>";
 		};
@@ -166,9 +167,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		67B016A21DC21CEC006EF53E /* ExampleProject */ = {
+		67B016A21DC21CEC006EF53E /* SwipingCards */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 67B016C01DC21CEC006EF53E /* Build configuration list for PBXNativeTarget "ExampleProject" */;
+			buildConfigurationList = 67B016C01DC21CEC006EF53E /* Build configuration list for PBXNativeTarget "SwipingCards" */;
 			buildPhases = (
 				67B0169F1DC21CEC006EF53E /* Sources */,
 				67B016A01DC21CEC006EF53E /* Frameworks */,
@@ -179,14 +180,14 @@
 			);
 			dependencies = (
 			);
-			name = ExampleProject;
+			name = SwipingCards;
 			productName = ExampleProject;
-			productReference = 67B016A31DC21CEC006EF53E /* ExampleProject.app */;
+			productReference = 67B016A31DC21CEC006EF53E /* SwipingCards.app */;
 			productType = "com.apple.product-type.application";
 		};
-		67B016B61DC21CEC006EF53E /* ExampleProjectTests */ = {
+		67B016B61DC21CEC006EF53E /* SwipingCardsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 67B016C31DC21CEC006EF53E /* Build configuration list for PBXNativeTarget "ExampleProjectTests" */;
+			buildConfigurationList = 67B016C31DC21CEC006EF53E /* Build configuration list for PBXNativeTarget "SwipingCardsTests" */;
 			buildPhases = (
 				67B016B31DC21CEC006EF53E /* Sources */,
 				67B016B41DC21CEC006EF53E /* Frameworks */,
@@ -197,9 +198,9 @@
 			dependencies = (
 				67B016B91DC21CEC006EF53E /* PBXTargetDependency */,
 			);
-			name = ExampleProjectTests;
+			name = SwipingCardsTests;
 			productName = ExampleProjectTests;
-			productReference = 67B016B71DC21CEC006EF53E /* ExampleProjectTests.xctest */;
+			productReference = 67B016B71DC21CEC006EF53E /* SwipingCardsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -209,11 +210,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = PPacie;
 				TargetAttributes = {
 					67B016A21DC21CEC006EF53E = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 534ZL84PZG;
 						ProvisioningStyle = Automatic;
 					};
 					67B016B61DC21CEC006EF53E = {
@@ -223,7 +225,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 67B0169E1DC21CEC006EF53E /* Build configuration list for PBXProject "ExampleProject" */;
+			buildConfigurationList = 67B0169E1DC21CEC006EF53E /* Build configuration list for PBXProject "SwipingCards" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -236,8 +238,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				67B016A21DC21CEC006EF53E /* ExampleProject */,
-				67B016B61DC21CEC006EF53E /* ExampleProjectTests */,
+				67B016A21DC21CEC006EF53E /* SwipingCards */,
+				67B016B61DC21CEC006EF53E /* SwipingCardsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -307,7 +309,7 @@
 /* Begin PBXTargetDependency section */
 		67B016B91DC21CEC006EF53E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 67B016A21DC21CEC006EF53E /* ExampleProject */;
+			target = 67B016A21DC21CEC006EF53E /* SwipingCards */;
 			targetProxy = 67B016B81DC21CEC006EF53E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -350,6 +352,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -372,7 +375,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -400,6 +403,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -416,7 +420,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -429,6 +433,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 534ZL84PZG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -437,6 +443,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ppacie.ExampleProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -445,6 +453,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 534ZL84PZG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -453,6 +463,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ppacie.ExampleProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -467,7 +479,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ppacie.ExampleProjectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExampleProject.app/ExampleProject";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwipingCards.app/SwipingCards";
 			};
 			name = Debug;
 		};
@@ -481,14 +493,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ppacie.ExampleProjectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExampleProject.app/ExampleProject";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwipingCards.app/SwipingCards";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		67B0169E1DC21CEC006EF53E /* Build configuration list for PBXProject "ExampleProject" */ = {
+		67B0169E1DC21CEC006EF53E /* Build configuration list for PBXProject "SwipingCards" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				67B016BE1DC21CEC006EF53E /* Debug */,
@@ -497,7 +509,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		67B016C01DC21CEC006EF53E /* Build configuration list for PBXNativeTarget "ExampleProject" */ = {
+		67B016C01DC21CEC006EF53E /* Build configuration list for PBXNativeTarget "SwipingCards" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				67B016C11DC21CEC006EF53E /* Debug */,
@@ -506,7 +518,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		67B016C31DC21CEC006EF53E /* Build configuration list for PBXNativeTarget "ExampleProjectTests" */ = {
+		67B016C31DC21CEC006EF53E /* Build configuration list for PBXNativeTarget "SwipingCardsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				67B016C41DC21CEC006EF53E /* Debug */,
