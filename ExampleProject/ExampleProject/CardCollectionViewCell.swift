@@ -28,6 +28,7 @@ class CardCollectionViewCell: SwipingCarouselCollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Cell Corner and Shadows
+        layer.masksToBounds = false
         layer.cornerRadius = 10
         layer.shadowRadius = 5
         layer.shadowOpacity = 0.6
