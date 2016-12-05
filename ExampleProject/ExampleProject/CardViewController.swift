@@ -83,13 +83,12 @@ extension CardViewController: SwipingCarouselDelegate {
         
         guard let cell = cell as? CardCollectionViewCell else { return }
         print("Swiped Down - Card to Delete: \(cell.nameLabel.text!)")
-        if let indexPath = collectionView?.indexPath(for: cell) { //Get the IndexPath from Cell being passed (swiped down).
-            var indexPaths = [IndexPath]()
-            indexPaths.append(indexPath)
+        //Get the IndexPath from Cell being passed (swiped down).
+        if let indexPath = collectionView?.indexPath(for: cell) {
             //Delete the swiped card from the Model.
             allTheCards.remove(at: (indexPath as NSIndexPath).row)
             //Delete the swiped card from CollectionView.
-            collectionView?.deleteItems(at: indexPaths)
+            collectionView?.deleteItems(at: [indexPath])
             //Delete cell from View.
             cell.removeFromSuperview()
         }
