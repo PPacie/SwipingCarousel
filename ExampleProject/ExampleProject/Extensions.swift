@@ -8,13 +8,6 @@
 
 import UIKit
 
-//Function to create a Random number in CGFloat.
-extension CGFloat {
-    static func random (_ max: Int) -> CGFloat {
-        return CGFloat (arc4random() % UInt32(max))
-    }
-}
-
 //Function to create a color from RGB and Computed property to get a Random UIColor based on this UIColorFromRGB method.
 extension UIColor {
     
