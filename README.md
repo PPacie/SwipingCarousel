@@ -24,6 +24,7 @@ github "ppacie/SwipingCarousel"
     import SwipingCarousel
     ```
 2. Make your `CollectionViewCell` subclass of `SwipingCarouselCollectionViewCell`.
+
     ```swift
     class MyCollectionViewCell: SwipingCarouselCollectionViewCell {
     }
