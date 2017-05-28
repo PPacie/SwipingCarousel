@@ -1,4 +1,4 @@
-# SwipingCarousel [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) ![Swift 3.0](https://img.shields.io/badge/Swift-3.0-orange.svg)
+# SwipingCarousel [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) ![Swift 3.0](https://img.shields.io/badge/Swift-3.1-orange.svg)
 
 ![alt tag](https://github.com/PPacie/Swiping-Carousel/blob/master/Swiping-Carousel-Demo.gif)
 
