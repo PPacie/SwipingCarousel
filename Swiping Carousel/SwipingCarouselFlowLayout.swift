@@ -18,7 +18,7 @@ public class SwipingCarouselFlowLayout:  UICollectionViewFlowLayout {
         static let minLineSpacing: CGFloat = 50.0
     }
     
-    var activeDistance: CGFloat = 200
+    public var activeDistance: CGFloat = 200
     
     override public func prepare() {
         super.prepare()
