@@ -12,12 +12,13 @@ public class SwipingCarouselFlowLayout:  UICollectionViewFlowLayout {
     
     // Mark: Constants 
     fileprivate struct Constants {
-        static let activeDistance: CGFloat = 200
         static let zoomFactor: CGFloat = 0.3
         static let itemWidth: CGFloat = 210       //Width of the Cell.
         static let itemHeight: CGFloat = 278      //Height of the Cell.
         static let minLineSpacing: CGFloat = 50.0
     }
+    
+    var activeDistance: CGFloat = 200
     
     override public func prepare() {
         super.prepare()
@@ -47,8 +48,8 @@ public class SwipingCarouselFlowLayout:  UICollectionViewFlowLayout {
             let itemAttributesCopy = itemAttributes.copy() as! UICollectionViewLayoutAttributes
             if itemAttributesCopy.frame.intersects(rect) {
                 let distance = visibleRect.midX - itemAttributes.center.x
-                let normalizedDistance = distance / Constants.activeDistance
-                if (abs(distance)) < Constants.activeDistance {
+                let normalizedDistance = distance / activeDistance
+                if (abs(distance)) < activeDistance {
                     let zoom = 1 + Constants.zoomFactor*(1 - abs(normalizedDistance))
                     itemAttributesCopy.transform3D = CATransform3DMakeScale(zoom, zoom, 1.0)
                     itemAttributesCopy.zIndex = 1
