@@ -77,10 +77,25 @@ Check the *ExampleProject* folder to see how it works.
 Sure, you are able to customize the layout by overriding the `UICollectionViewDelegateFlowLayout` methods you desire.
 e.g.
 ```swift
-    extension MyCollectionViewController: UICollectionViewDelegateFlowLayout {
+extension MyCollectionViewController: UICollectionViewDelegateFlowLayout {
     
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            return CGSize(width: 220, height: 220)
-        }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 200, left: 120, bottom: 200, right: 120)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 150.0, height: 230.0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 50.0
+    }
+}
+```
+Also if you set the layout programmatically you will be allowed to change the ```activeDistance``` value. This property will get you access to modify the layoutAttributes of the collectionView. It represents the distance from the center where the cell/item will start zooming in and out. Default value is 200.0
+
+```swift
+let layout = SwipingCarouselFlowLayout()
+layout.activeDistance = 50
+collectionView.setCollectionViewLayout(layout, animated: false)
 ```
