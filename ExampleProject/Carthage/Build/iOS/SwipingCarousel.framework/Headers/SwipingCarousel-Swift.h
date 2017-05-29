@@ -152,6 +152,7 @@ SWIFT_CLASS("_TtC15SwipingCarousel33SwipingCarouselCollectionViewCell")
 
 SWIFT_CLASS("_TtC15SwipingCarousel25SwipingCarouselFlowLayout")
 @interface SwipingCarouselFlowLayout : UICollectionViewFlowLayout
+@property (nonatomic) CGFloat activeDistance;
 - (void)prepareLayout;
 - (NSArray<UICollectionViewLayoutAttributes *> * _Nullable)layoutAttributesForElementsInRect:(CGRect)rect SWIFT_WARN_UNUSED_RESULT;
 - (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity SWIFT_WARN_UNUSED_RESULT;
