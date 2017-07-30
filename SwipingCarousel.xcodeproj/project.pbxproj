@@ -7,30 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		67B016781DC2041F006EF53E /* SwipingCarousel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B0166E1DC2041F006EF53E /* SwipingCarousel.framework */; };
-		67B0167D1DC2041F006EF53E /* Swiping_CarouselTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B0167C1DC2041F006EF53E /* Swiping_CarouselTests.swift */; };
 		67B0167F1DC2041F006EF53E /* Swiping Carousel.h in Headers */ = {isa = PBXBuildFile; fileRef = 67B016711DC2041F006EF53E /* Swiping Carousel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		67B0168A1DC20B1D006EF53E /* SwipingCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B016881DC20B1D006EF53E /* SwipingCarouselFlowLayout.swift */; };
 		67B0168B1DC20B1D006EF53E /* SwipingCarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B016891DC20B1D006EF53E /* SwipingCarouselCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		67B016791DC2041F006EF53E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 67B016651DC2041F006EF53E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 67B0166D1DC2041F006EF53E;
-			remoteInfo = "Swiping Carousel";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		67B0166E1DC2041F006EF53E /* SwipingCarousel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwipingCarousel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67B016711DC2041F006EF53E /* Swiping Carousel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swiping Carousel.h"; sourceTree = "<group>"; };
 		67B016721DC2041F006EF53E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		67B016771DC2041F006EF53E /* SwipingCarouselTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwipingCarouselTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		67B0167C1DC2041F006EF53E /* Swiping_CarouselTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swiping_CarouselTests.swift; sourceTree = "<group>"; };
-		67B0167E1DC2041F006EF53E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67B016881DC20B1D006EF53E /* SwipingCarouselFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipingCarouselFlowLayout.swift; sourceTree = "<group>"; };
 		67B016891DC20B1D006EF53E /* SwipingCarouselCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipingCarouselCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -43,14 +28,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		67B016741DC2041F006EF53E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				67B016781DC2041F006EF53E /* SwipingCarousel.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -58,7 +35,6 @@
 			isa = PBXGroup;
 			children = (
 				67B016701DC2041F006EF53E /* Swiping Carousel */,
-				67B0167B1DC2041F006EF53E /* Swiping CarouselTests */,
 				67B0166F1DC2041F006EF53E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,7 +43,6 @@
 			isa = PBXGroup;
 			children = (
 				67B0166E1DC2041F006EF53E /* SwipingCarousel.framework */,
-				67B016771DC2041F006EF53E /* SwipingCarouselTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,15 +56,6 @@
 				67B016721DC2041F006EF53E /* Info.plist */,
 			);
 			path = "Swiping Carousel";
-			sourceTree = "<group>";
-		};
-		67B0167B1DC2041F006EF53E /* Swiping CarouselTests */ = {
-			isa = PBXGroup;
-			children = (
-				67B0167C1DC2041F006EF53E /* Swiping_CarouselTests.swift */,
-				67B0167E1DC2041F006EF53E /* Info.plist */,
-			);
-			path = "Swiping CarouselTests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,24 +90,6 @@
 			productReference = 67B0166E1DC2041F006EF53E /* SwipingCarousel.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		67B016761DC2041F006EF53E /* SwipingCarouselTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 67B016851DC2041F006EF53E /* Build configuration list for PBXNativeTarget "SwipingCarouselTests" */;
-			buildPhases = (
-				67B016731DC2041F006EF53E /* Sources */,
-				67B016741DC2041F006EF53E /* Frameworks */,
-				67B016751DC2041F006EF53E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				67B0167A1DC2041F006EF53E /* PBXTargetDependency */,
-			);
-			name = SwipingCarouselTests;
-			productName = "Swiping CarouselTests";
-			productReference = 67B016771DC2041F006EF53E /* SwipingCarouselTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -155,10 +103,6 @@
 					67B0166D1DC2041F006EF53E = {
 						CreatedOnToolsVersion = 8.0;
 						LastSwiftMigration = 0800;
-						ProvisioningStyle = Automatic;
-					};
-					67B016761DC2041F006EF53E = {
-						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -176,20 +120,12 @@
 			projectRoot = "";
 			targets = (
 				67B0166D1DC2041F006EF53E /* SwipingCarousel */,
-				67B016761DC2041F006EF53E /* SwipingCarouselTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		67B0166C1DC2041F006EF53E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		67B016751DC2041F006EF53E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -208,23 +144,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		67B016731DC2041F006EF53E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				67B0167D1DC2041F006EF53E /* Swiping_CarouselTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		67B0167A1DC2041F006EF53E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 67B0166D1DC2041F006EF53E /* SwipingCarousel */;
-			targetProxy = 67B016791DC2041F006EF53E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		67B016801DC2041F006EF53E /* Debug */ = {
@@ -367,30 +287,6 @@
 			};
 			name = Release;
 		};
-		67B016861DC2041F006EF53E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = "Swiping CarouselTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ppacie.Swiping-CarouselTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		67B016871DC2041F006EF53E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = "Swiping CarouselTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ppacie.Swiping-CarouselTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -408,15 +304,6 @@
 			buildConfigurations = (
 				67B016831DC2041F006EF53E /* Debug */,
 				67B016841DC2041F006EF53E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		67B016851DC2041F006EF53E /* Build configuration list for PBXNativeTarget "SwipingCarouselTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				67B016861DC2041F006EF53E /* Debug */,
-				67B016871DC2041F006EF53E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
