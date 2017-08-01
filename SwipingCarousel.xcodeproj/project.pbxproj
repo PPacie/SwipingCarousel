@@ -157,7 +157,6 @@
 				TargetAttributes = {
 					67895D861F3095FD0004DB9E = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 534ZL84PZG;
 						ProvisioningStyle = Automatic;
 					};
 					67B0166D1DC2041F006EF53E = {
@@ -236,7 +235,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				DEVELOPMENT_TEAM = 534ZL84PZG;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SwipingCarouselTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -250,7 +249,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				DEVELOPMENT_TEAM = 534ZL84PZG;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SwipingCarouselTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -410,6 +409,7 @@
 				67895D911F3095FD0004DB9E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		67B016681DC2041F006EF53E /* Build configuration list for PBXProject "SwipingCarousel" */ = {
 			isa = XCConfigurationList;
