@@ -144,8 +144,9 @@ SWIFT_CLASS("_TtC15SwipingCarousel33SwipingCarouselCollectionViewCell")
 @interface SwipingCarouselCollectionViewCell : UICollectionViewCell
 @property (nonatomic) BOOL deleteOnSwipeUp;
 @property (nonatomic) BOOL deleteOnSwipeDown;
-- (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (void)awakeFromNib;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class UICollectionViewLayoutAttributes;
