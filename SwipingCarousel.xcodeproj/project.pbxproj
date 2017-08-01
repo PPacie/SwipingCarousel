@@ -10,6 +10,7 @@
 		67B0167F1DC2041F006EF53E /* Swiping Carousel.h in Headers */ = {isa = PBXBuildFile; fileRef = 67B016711DC2041F006EF53E /* Swiping Carousel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		67B0168A1DC20B1D006EF53E /* SwipingCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B016881DC20B1D006EF53E /* SwipingCarouselFlowLayout.swift */; };
 		67B0168B1DC20B1D006EF53E /* SwipingCarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B016891DC20B1D006EF53E /* SwipingCarouselCollectionViewCell.swift */; };
+		67CBE1721F3089FC00F35988 /* SwipingCarouselCellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBE1711F3089FC00F35988 /* SwipingCarouselCellManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +19,7 @@
 		67B016721DC2041F006EF53E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67B016881DC20B1D006EF53E /* SwipingCarouselFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipingCarouselFlowLayout.swift; sourceTree = "<group>"; };
 		67B016891DC20B1D006EF53E /* SwipingCarouselCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipingCarouselCollectionViewCell.swift; sourceTree = "<group>"; };
+		67CBE1711F3089FC00F35988 /* SwipingCarouselCellManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipingCarouselCellManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			children = (
 				67B016881DC20B1D006EF53E /* SwipingCarouselFlowLayout.swift */,
 				67B016891DC20B1D006EF53E /* SwipingCarouselCollectionViewCell.swift */,
+				67CBE1711F3089FC00F35988 /* SwipingCarouselCellManager.swift */,
 				67B016711DC2041F006EF53E /* Swiping Carousel.h */,
 				67B016721DC2041F006EF53E /* Info.plist */,
 			);
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67CBE1721F3089FC00F35988 /* SwipingCarouselCellManager.swift in Sources */,
 				67B0168B1DC20B1D006EF53E /* SwipingCarouselCollectionViewCell.swift in Sources */,
 				67B0168A1DC20B1D006EF53E /* SwipingCarouselFlowLayout.swift in Sources */,
 			);
