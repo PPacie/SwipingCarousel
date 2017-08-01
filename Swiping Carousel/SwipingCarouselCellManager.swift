@@ -10,7 +10,7 @@ import UIKit
 
 struct SwpingCarouselCellManager {
     
-    fileprivate var cell: SwipingCarouselCollectionViewCell?
+    fileprivate var cell: SwipingCarouselCollectionViewCell!
     
     init(withCell: SwipingCarouselCollectionViewCell) {
         self.cell = withCell
@@ -27,8 +27,6 @@ struct SwpingCarouselCellManager {
     fileprivate var originalPoint = CGPoint()
     
     mutating func handlePanGesture(_ sender: UIPanGestureRecognizer) {
-        
-        guard let cell = cell else { return }
         
         swipeDistanceOnY = sender.translation(in: self.cell).y //Get the distance of the Swipe on "y" axis.
         
@@ -48,7 +46,6 @@ struct SwpingCarouselCellManager {
     
     func afterSwipeAction() {
         //First, we check if the swiped cell is the one in the middle of screen by cheking its size. If the cell is one of the sides, we send it back to its original position.
-        guard let cell = cell else { return }
         if (cell.frame.size.height > cell.bounds.size.height) {
             //If the cell is the one at the center (biggest one), we proceed to check wheather or not the distance of the gesture is enough to move the cell off the screen (up or down).
             if swipeDistanceOnY > Constants.SwipeDistanceToTakeAction {
@@ -71,7 +68,6 @@ struct SwpingCarouselCellManager {
         /* The maxUpperPoint will depend on deleteOnSwipeUp variable.
          Under default behavior, 'false', the cell will go back to the original position.
          If it's set to 'true' the cell will go down off the screen to be able to delete it throught its delegate. */
-        guard let cell = cell else { return }
         let maxUpperPoint: CGPoint = cell.deleteOnSwipeUp ? CGPoint(x: originalPoint.x, y: 2 * cell.frame.minY) : originalPoint
         UIView.animate(withDuration: Constants.SwipeImageAnimationDuration, animations: { () -> Void in
             self.cell?.center = maxUpperPoint //Move the cell to the maxUpperPoint.
@@ -86,7 +82,6 @@ struct SwpingCarouselCellManager {
         /* The maxDownPoint will depend on deleteOnSwipeDown variable.
          Under default behavior, 'false', the cell will go back to the original position.
          If it's set to 'true' the cell will go down off the screen to be able to delete it throught its delegate. */
-        guard let cell = cell else { return }
         let maxDownPoint: CGPoint = cell.deleteOnSwipeDown ? CGPoint(x: originalPoint.x, y: 2 * cell.frame.maxY) : originalPoint
         UIView.animate(withDuration: Constants.SwipeImageAnimationDuration, animations: { () -> Void in
             self.cell?.center = maxDownPoint //Move the cell to the maxDownPoint.
