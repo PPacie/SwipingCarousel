@@ -23,8 +23,8 @@ struct SwpingCarouselCellManager {
         static let CenterImageAnimationDuration: TimeInterval = 0.20 //Duration of the Animation when image gets back to original postion.
     }
     
-    fileprivate var swipeDistanceOnY = CGFloat() //Distance of the swipe over "y" axis.
-    fileprivate var originalPoint = CGPoint()
+    var swipeDistanceOnY = CGFloat() //Distance of the swipe over "y" axis.
+    var originalPoint = CGPoint()
     
     mutating func handlePanGesture(_ sender: UIPanGestureRecognizer) {
         
