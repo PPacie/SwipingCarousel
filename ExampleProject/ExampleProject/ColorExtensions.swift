@@ -1,5 +1,5 @@
 //
-//  Extensions.swift
+//  ColorExtensions.swift
 //  Swiping Cards
 //
 //  Created by Pablo Paciello on 10/26/16.
