@@ -29,7 +29,7 @@ public class SwipingCarouselFlowLayout:  UICollectionViewFlowLayout {
         //These numbers will depend on the size of your cards you have set in the CardsViewFlowConstants.
         //60 - will let the first and last card of the CollectionView to be centered.
         //100 - will avoid the double rows in the CollectionView
-        sectionInset = UIEdgeInsetsMake(100.0, 60.0, 100, 60.0)
+        sectionInset = UIEdgeInsets.init(top: 100.0, left: 60.0, bottom: 100, right: 60.0)
     }
 
     // Here is where the magic happens
