@@ -1,4 +1,4 @@
-# SwipingCarousel [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) ![Swift 5.1](https://img.shields.io/badge/Swift-5.0-orange.svg) ![](https://api.travis-ci.org/PPacie/SwipingCarousel.svg?branch=master)
+# SwipingCarousel [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) ![Swift 5.1](https://img.shields.io/badge/Swift-5.1-orange.svg) ![](https://api.travis-ci.org/PPacie/SwipingCarousel.svg?branch=master)
 
 ![alt tag](https://github.com/PPacie/Swiping-Carousel/blob/master/Swiping-Carousel-Demo.gif)
 
