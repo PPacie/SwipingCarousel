@@ -15,22 +15,20 @@ public protocol SwipingCarouselDelegate : class {
 }
 
 open class SwipingCarouselCollectionViewCell: UICollectionViewCell {
-    
     public weak var delegate: SwipingCarouselDelegate?
     public var deleteOnSwipeUp = false
     public var deleteOnSwipeDown = false
-    fileprivate var cellManager: SwpingCarouselCellManager!
+    private var cellManager: SwpingCarouselCellManager!
     
     open override func awakeFromNib() {
         super.awakeFromNib()
-        
         //Init the Cell Manager
         cellManager = SwpingCarouselCellManager(withCell: self)
         // Add Gesture to Cell
-        self.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture(_:))))        
+        addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture(_:))))        
     }
     
-    @objc fileprivate func handlePanGesture(_ sender: UIPanGestureRecognizer) {        
+    @objc private func handlePanGesture(_ sender: UIPanGestureRecognizer) {
         cellManager.handlePanGesture(sender)
     }    
 }

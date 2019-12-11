@@ -10,21 +10,17 @@ import UIKit
 import SwipingCarousel
 
 class CardViewController: UIViewController {
-
     @IBOutlet weak var collectionView: UICollectionView! { didSet {
         collectionView.register(CardCollectionViewCell.nib, forCellWithReuseIdentifier: CardCollectionViewCell.reuseIdentifier)
         }
     }
     
-    // MARK: Model
     // Load allTheCards from SavedCards Class.
-    fileprivate var allTheCards = Card.loadCards()
-    fileprivate let segueIdentifier = "OpenChat"
-    
+    private var allTheCards = Card.loadCards()
+    private let segueIdentifier = "OpenChat"
 }
     // MARK: UICollectionView DataSource
 extension CardViewController: UICollectionViewDataSource, UICollectionViewDelegate {
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //Return the number of items in the section
         return allTheCards.count
@@ -42,7 +38,6 @@ extension CardViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
         if let cell = collectionView.cellForItem(at: indexPath) {
             //We check if the selected Card is the one in the middle to open the chat. If it's not, we scroll to the selected side card.
             if cell.frame.size.height > cell.bounds.size.height {
@@ -52,21 +47,18 @@ extension CardViewController: UICollectionViewDataSource, UICollectionViewDelega
             }
         }
     }
-
 }
     // MARK: Conform to the SwipingCarousel Delegate
 extension CardViewController: SwipingCarouselDelegate {
-    
     func cellSwipedUp(_ cell: UICollectionViewCell) {
-        
         guard let cell = cell as? CardCollectionViewCell else { return }
         print("Swiped Up - Card to Like/Dislike: \(cell.nameLabel.text!)")
         //Get the IndexPath from Cell being passed (swiped up).
         if let indexPath = collectionView?.indexPath(for: cell) {
             //Change the Like status to Like/Dislike.
-            allTheCards[(indexPath as NSIndexPath).row].likedCard! = !allTheCards[(indexPath as NSIndexPath).row].likedCard!
+            allTheCards[(indexPath as NSIndexPath).row].likedCard = !allTheCards[(indexPath as NSIndexPath).row].likedCard
             // Update the Like Image
-            cell.likeImage.image = allTheCards[(indexPath as NSIndexPath).row].likedCard! ? UIImage(named: "Liked") : UIImage(named:"Disliked")
+            cell.likeImage.image = allTheCards[(indexPath as NSIndexPath).row].likedCard ? UIImage(named: "Liked") : UIImage(named:"Disliked")
             //We are going to Scroll to the next item or to the previous one after Liking/Disliking a card.
             //So, we check if we ara at the end of the Array to know if we can scroll to the next item.
             if (indexPath as NSIndexPath).row+1 < allTheCards.count {
@@ -80,7 +72,6 @@ extension CardViewController: SwipingCarouselDelegate {
     }
     
     func cellSwipedDown(_ cell: UICollectionViewCell) {
-        
         guard let cell = cell as? CardCollectionViewCell else { return }
         print("Swiped Down - Card to Delete: \(cell.nameLabel.text!)")
         //Get the IndexPath from Cell being passed (swiped down).

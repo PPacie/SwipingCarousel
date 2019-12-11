@@ -8,27 +8,25 @@
 
 import UIKit
 
-struct SwpingCarouselCellManager {
+final class SwpingCarouselCellManager {
+    private var cell: SwipingCarouselCollectionViewCell!
+    private lazy var swipeDistanceOnY = CGFloat() //Distance of the swipe over "y" axis.
+    private lazy var originalPoint = CGPoint()
     
-    fileprivate var cell: SwipingCarouselCollectionViewCell!
-    
-    init(withCell: SwipingCarouselCollectionViewCell) {
-        self.cell = withCell
+    init(withCell cell: SwipingCarouselCollectionViewCell) {
+        self.cell = cell
     }
     
-    // MARK: Gestures Handling
-    fileprivate struct Constants {
+    //MARK: - Gestures Handling
+    private enum Constants {
         static let SwipeDistanceToTakeAction: CGFloat  = UIScreen.main.bounds.size.height / 5 //Distance required for the cell to go off the screen.
         static let SwipeImageAnimationDuration: TimeInterval = 0.30 //Duration of the Animation when Swiping Up/Down.
         static let CenterImageAnimationDuration: TimeInterval = 0.20 //Duration of the Animation when image gets back to original postion.
     }
     
-    var swipeDistanceOnY = CGFloat() //Distance of the swipe over "y" axis.
-    var originalPoint = CGPoint()
-    
-    mutating func handlePanGesture(_ sender: UIPanGestureRecognizer) {
-        
-        swipeDistanceOnY = sender.translation(in: self.cell).y //Get the distance of the Swipe on "y" axis.
+    func handlePanGesture(_ sender: UIPanGestureRecognizer) {
+        //Get the distance of the Swipe on "y" axis.
+        swipeDistanceOnY = sender.translation(in: self.cell).y
         
         switch sender.state {
         case .began:
@@ -44,7 +42,7 @@ struct SwpingCarouselCellManager {
         }
     }
     
-    func afterSwipeAction() {
+    private func afterSwipeAction() {
         //First, we check if the swiped cell is the one in the middle of screen by cheking its size. If the cell is one of the sides, we send it back to its original position.
         if (cell.frame.size.height > cell.bounds.size.height) {
             //If the cell is the one at the center (biggest one), we proceed to check wheather or not the distance of the gesture is enough to move the cell off the screen (up or down).
@@ -64,7 +62,7 @@ struct SwpingCarouselCellManager {
         }
     }
     
-    func upAction() {
+    private func upAction() {
         /* The maxUpperPoint will depend on deleteOnSwipeUp variable.
          Under default behavior, 'false', the cell will go back to the original position.
          If it's set to 'true' the cell will go down off the screen to be able to delete it throught its delegate. */
