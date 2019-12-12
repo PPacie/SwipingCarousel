@@ -10,7 +10,6 @@ import UIKit
 
 //Function to create a color from RGB and Computed property to get a Random UIColor based on this UIColorFromRGB method.
 extension UIColor {
-    
     class func colorFromRGB(_ r: Int, g: Int, b: Int) -> UIColor {
         return UIColor(red: CGFloat(Float(r) / 255), green: CGFloat(Float(g) / 255), blue: CGFloat(Float(b) / 255), alpha: 1)
     }

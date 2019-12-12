@@ -9,8 +9,7 @@
 import UIKit
 import SwipingCarousel
 
-class CardCollectionViewCell: SwipingCarouselCollectionViewCell {
-    
+class CardCollectionViewCell: SwipingCarouselCollectionViewCell {    
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var professionLabel: UILabel!
@@ -43,6 +42,6 @@ class CardCollectionViewCell: SwipingCarouselCollectionViewCell {
         mainDescriptionLabel.text = card.mainDescription
         activityLabel.text = card.activity
         backgroundColor = card.backgroundColor
-        likeImage.image = card.likedCard! ? UIImage(named: "Liked") : UIImage(named:"Disliked")
+        likeImage.image = card.likedCard ? UIImage(named: "Liked") : UIImage(named:"Disliked")
     }
 }

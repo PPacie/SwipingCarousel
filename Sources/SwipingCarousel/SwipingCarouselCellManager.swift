@@ -8,27 +8,25 @@
 
 import UIKit
 
-struct SwpingCarouselCellManager {
+final class SwpingCarouselCellManager {
+    private var cell: SwipingCarouselCollectionViewCell!
+    lazy var swipeDistanceOnY = CGFloat() //Distance of the swipe over "y" axis.
+    lazy var originalPoint = CGPoint()
     
-    fileprivate var cell: SwipingCarouselCollectionViewCell!
-    
-    init(withCell: SwipingCarouselCollectionViewCell) {
-        self.cell = withCell
+    init(withCell cell: SwipingCarouselCollectionViewCell) {
+        self.cell = cell
     }
     
-    // MARK: Gestures Handling
-    fileprivate struct Constants {
+    //MARK: - Gestures Handling
+    private enum Constants {
         static let SwipeDistanceToTakeAction: CGFloat  = UIScreen.main.bounds.size.height / 5 //Distance required for the cell to go off the screen.
         static let SwipeImageAnimationDuration: TimeInterval = 0.30 //Duration of the Animation when Swiping Up/Down.
         static let CenterImageAnimationDuration: TimeInterval = 0.20 //Duration of the Animation when image gets back to original postion.
     }
     
-    var swipeDistanceOnY = CGFloat() //Distance of the swipe over "y" axis.
-    var originalPoint = CGPoint()
-    
-    mutating func handlePanGesture(_ sender: UIPanGestureRecognizer) {
-        
-        swipeDistanceOnY = sender.translation(in: self.cell).y //Get the distance of the Swipe on "y" axis.
+    func handlePanGesture(_ sender: UIPanGestureRecognizer) {
+        //Get the distance of the Swipe on "y" axis.
+        swipeDistanceOnY = sender.translation(in: self.cell).y
         
         switch sender.state {
         case .began:
