@@ -8,7 +8,7 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "SwipingCarousel",
+            name: "Swiping Carousel",
             targets: ["SwipingCarousel"]),
     ],
     dependencies: [
