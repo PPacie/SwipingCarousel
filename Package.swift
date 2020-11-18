@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "Swiping Carousel",
     platforms: [
-        .iOS(.v8),
+        .iOS(.9),
     ],
     products: [
         .library(
